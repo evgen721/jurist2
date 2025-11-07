@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЮрКомпания - Главная</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="content\logo2.png" alt="ЮрКомпания" class="logo-img">
+                    <span class="company-name">ЮрКомпания</span>
+					<button class="menu-toggle">☰</button>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link active">Главная</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                    <a href="staff.html" class="nav-link">Сотрудники</a>
+                    <a href="reviews.html" class="nav-link">Отзывы</a>
+                    <a href="articles.html" class="nav-link">Статьи</a>
+                </nav>
+				
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <img src="content\banner.png" alt="Баннер" class="banner-img">
+        <div class="banner-overlay">
+            <h1 class="banner-title">Профессиональные юридические услуги для вашего бизнеса</h1>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section">
+        <div class="container">
+            <h2 class="section-title">О компании</h2>
+            <p class="about-text">
+                ЮрКомпания — это команда профессионалов с многолетним опытом работы в области юриспруденции. 
+                Мы предоставляем полный спектр юридических услуг для физических и юридических лиц. 
+                Наша цель — защита ваших интересов и достижение наилучших результатов в каждом деле. 
+                Мы ценим доверие наших клиентов и гарантируем индивидуальный подход к каждой ситуации.
+            </p>
+        </div>
+    </section>
+
+    <!-- Reviews Slider Section -->
+    <section class="section reviews-slider-section">
+        <div class="container">
+            <h2 class="section-title">Отзывы клиентов</h2>
+            <div class="slider">
+                <div class="slider-track" id="reviewsSlider">
+                    <div class="review-card">
+                        <div class="review-rating">★★★★★</div>
+                        <p class="review-text">Отличная работа! Помогли решить сложный вопрос быстро и профессионально.</p>
+                        <p class="review-author">Иван Петров</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-rating">★★★★★</div>
+                        <p class="review-text">Рекомендую всем! Компетентные специалисты, разумные цены.</p>
+                        <p class="review-author">Мария Сидорова</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-rating">★★★★☆</div>
+                        <p class="review-text">Хороший сервис, внимательное отношение к клиентам.</p>
+                        <p class="review-author">Александр Иванов</p>
+                    </div>
+					<div class="review-card">
+                        <div class="review-rating">★★★★☆</div>
+                        <p class="review-text">Хороший сервис, внимательное отношение к клиентам.</p>
+                        <p class="review-author">Александр Иванов</p>
+                    </div>
+					<div class="review-card">
+                        <div class="review-rating">★★★★☆</div>
+                        <p class="review-text">Хороший сервис, внимательное отношение к клиентам.</p>
+                        <p class="review-author">Александр Иванов</p>
+                    </div>
+					<div class="review-card">
+                        <div class="review-rating">★★★★☆</div>
+                        <p class="review-text">Хороший сервис, внимательное отношение к клиентам.</p>
+                        <p class="review-author">Александр Иванов</p>
+                    </div>
+					<div class="review-card">
+                        <div class="review-rating">★★★★☆</div>
+                        <p class="review-text">Хороший сервис, внимательное отношение к клиентам.</p>
+                        <p class="review-author">Александр Иванов</p>
+                    </div>
+                </div>
+                <button class="slider-btn slider-btn-prev" onclick="slideReviews(-1)">‹</button>
+                <button class="slider-btn slider-btn-next" onclick="slideReviews(1)">›</button>
+            </div>
+            <a href="reviews.html" class="btn-more">Смотреть все</a>
+        </div>
+    </section>
+
+    <!-- Staff Slider Section -->
+    <section class="section staff-slider-section">
+        <div class="container">
+            <h2 class="section-title">Наши сотрудники</h2>
+            <div class="slider">
+                <div class="slider-track" id="staffSlider">
+                    <div class="staff-card">
+                        <img src="content\woman.png" alt="Сотрудник" class="staff-img">
+                        <h3 class="staff-name">Иванова Елена Сергеевна</h3>
+                        <p class="staff-desc">Главный юрист, специалист по корпоративному праву</p>
+                    </div>
+                    <div class="staff-card">
+                        <img src="content\man3.png" alt="Сотрудник" class="staff-img">
+                        <h3 class="staff-name">Петров Дмитрий Александрович</h3>
+                        <p class="staff-desc">Юрист, специалист по гражданским делам</p>
+                    </div>
+                    <div class="staff-card">
+                        <img src="content\man2.png" alt="Сотрудник" class="staff-img">
+                        <h3 class="staff-name">Смирнова Ольга Викторовна</h3>
+                        <p class="staff-desc">Помощник юриста, специалист по документообороту</p>
+                    </div>
+					<div class="staff-card">
+                        <img src="content\man.png" alt="Сотрудник" class="staff-img">
+                        <h3 class="staff-name">Смирнова Ольга Викторовна</h3>
+                        <p class="staff-desc">Помощник юриста, специалист по документообороту</p>
+                    </div>
+					<div class="staff-card">
+                        <img src="staff3.jpg" alt="Сотрудник" class="staff-img">
+                        <h3 class="staff-name">Смирнова Ольга Викторовна</h3>
+                        <p class="staff-desc">Помощник юриста, специалист по документообороту</p>
+                    </div>
+					<div class="staff-card">
+                        <img src="staff3.jpg" alt="Сотрудник" class="staff-img">
+                        <h3 class="staff-name">Смирнова Ольга Викторовна</h3>
+                        <p class="staff-desc">Помощник юриста, специалист по документообороту</p>
+                    </div>
+					<div class="staff-card">
+                        <img src="staff3.jpg" alt="Сотрудник" class="staff-img">
+                        <h3 class="staff-name">Смирнова Ольга Викторовна</h3>
+                        <p class="staff-desc">Помощник юриста, специалист по документообороту</p>
+                    </div>
+                </div>
+                <button class="slider-btn slider-btn-prev" onclick="slideStaff(-1)">‹</button>
+                <button class="slider-btn slider-btn-next" onclick="slideStaff(1)">›</button>
+            </div>
+            <a href="staff.html" class="btn-more">Смотреть все</a>
+        </div>
+    </section>
+
+    <!-- Articles Slider Section -->
+    <section class="section articles-slider-section">
+        <div class="container">
+            <h2 class="section-title">Полезные статьи</h2>
+            <div class="slider">
+                <div class="slider-track" id="articlesSlider">
+                    <div class="article-card">
+                        <img src="article1.jpg" alt="Статья" class="article-img">
+                        <h3 class="article-title">Как правильно составить договор</h3>
+                        <p class="article-desc">Основные принципы составления юридически грамотных договоров</p>
+                    </div>
+                    <div class="article-card">
+                        <img src="article2.jpg" alt="Статья" class="article-img">
+                        <h3 class="article-title">Защита прав потребителей</h3>
+                        <p class="article-desc">Что делать, если ваши права как потребителя нарушены</p>
+                    </div>
+                    <div class="article-card">
+                        <img src="article3.jpg" alt="Статья" class="article-img">
+                        <h3 class="article-title">Трудовые споры: решение конфликтов</h3>
+                        <p class="article-desc">Как эффективно разрешить споры с работодателем</p>
+                    </div>
+					<div class="article-card">
+                        <img src="article3.jpg" alt="Статья" class="article-img">
+                        <h3 class="article-title">Трудовые споры: решение конфликтов</h3>
+                        <p class="article-desc">Как эффективно разрешить споры с работодателем</p>
+                    </div>
+					<div class="article-card">
+                        <img src="article3.jpg" alt="Статья" class="article-img">
+                        <h3 class="article-title">Трудовые споры: решение конфликтов</h3>
+                        <p class="article-desc">Как эффективно разрешить споры с работодателем</p>
+                    </div>
+					<div class="article-card">
+                        <img src="article3.jpg" alt="Статья" class="article-img">
+                        <h3 class="article-title">Трудовые споры: решение конфликтов</h3>
+                        <p class="article-desc">Как эффективно разрешить споры с работодателем</p>
+                    </div>
+                </div>
+                <button class="slider-btn slider-btn-prev" onclick="slideArticles(-1)">‹</button>
+                <button class="slider-btn slider-btn-next" onclick="slideArticles(1)">›</button>
+            </div>
+            <a href="articles.html" class="btn-more">Смотреть все</a>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="section contacts-section">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contacts-content">
+                <div class="contacts-info">
+                    <p><strong>Адрес:</strong> г. Москва, ул. Тверская, д. 10, офис 25</p>
+                    <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+                    <p><strong>Email:</strong> info@urcompany.ru</p>
+                    <p><strong>Время работы:</strong> Пн-Пт: 9:00 - 18:00</p>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4447337749854!2d37.60633!3d55.7558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIwLjkiTiAzN8KwMzYnMjIuOCJF!5e0!3m2!1sru!2sru!4v1234567890" 
+                            class="map" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 ООО ЮрКомпания, г. Екатеринбург</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+	<script src="js/menu-toggle.js"></script>
+</body>
+</html>
