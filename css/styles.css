@@ -1,0 +1,529 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background: #f4f1ee;
+    color: #342618;
+}
+.header {
+    background: #7b4e19;
+    color: #fff;
+    padding: 0;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo-img {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    background: #fff6ec;
+    object-fit: cover;
+}
+.company-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.nav {
+    display: flex;
+    gap: 14px;
+}
+.nav-link {
+    color: #ffe4bb;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 24px;
+    transition: background .15s;
+}
+.nav-link.active,
+.nav-link:hover {
+    background: #a36d3b;
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+	color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (min-width: 621px) and (max-width: 800px) {
+    .company-name {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+    }
+}
+
+/* На всех остальных размерах - нормальное отображение */
+.company-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 620px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .nav.active {
+        display: flex;
+    }
+    
+    .header-content {
+        flex-wrap: nowrap;
+    }
+}
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+    background: #ccb199;
+    margin-bottom: 32px;
+}
+.banner-img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    filter: brightness(0.7) sepia(0.1) contrast(1.1);
+}
+.banner-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-title {
+    color: #fff;
+    font-size: 2.4em;
+    font-weight: 700;
+    text-shadow: 1px 2px 12px #6b4113;
+    letter-spacing: 1px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 18px;
+	
+}
+.section {
+    margin-bottom: 100px;
+}
+
+.section-title, .page-title {
+    font-size: 2em;
+    color: #805118;
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.about-text {
+    font-size: 1.15em;
+    color: #453320;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+.slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+	
+}
+.slider-track {
+    display: flex;
+    gap: 16px;
+	margin:30px;
+	scroll-behavior: smooth;
+   transition: scroll-left 0.3s ease;
+   overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Скрыть скроллбар в Firefox */
+    -ms-overflow-style: none; /* Скрыть скроллбар в IE */
+}
+
+.slider-track::-webkit-scrollbar {
+    display: none; /* Скрыть скроллбар в Chrome/Safari */
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #bb885f;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.4em;
+    width: 40px; height: 40px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.95;
+    transition: background 0.2s;
+}
+.slider-btn:hover {
+    background: #a36d3b;
+}
+.slider-btn-prev { left: 6px; }
+.slider-btn-next { right: 6px; }
+.review-card, .staff-card, .article-card {
+    background: #fffdfc;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px #d6c4b0cc;
+    padding: 20px 18px;
+    min-width: 240px;
+    max-width: 285px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+.review-card:hover, .staff-card:hover, .article-card:hover {
+    box-shadow: 0 8px 24px #ab9475aa;
+}
+.review-rating {
+    font-size: 1.25em;
+    color: #a36d3b;
+}
+.review-meta {
+    font-size: 0.95em;
+    color: #7e6136;
+    margin-bottom: 5px;
+}
+.review-snippet {
+    color: #625143;
+    font-size: 1.05em;
+}
+.staff-img, .article-img {
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #c7a77d;
+    margin-bottom: 8px;
+}
+.staff-name, .article-title {
+    font-size: 1.12em;
+    font-weight: 600;
+    color: #815921;
+    margin-bottom: 4px;
+}
+.staff-desc, .article-desc {
+    font-size: 1em;
+    color: #6c5332;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.btn-more, .btn-load-more {
+    display: inline-block;
+    background: #7b4e19;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 22px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+	float: right;
+	margin-right: 30px;
+}
+
+
+.btn-more:hover, .btn-load-more:hover { background: #aa8249; }
+
+.contacts-section, .contacts-info-block {
+    border-radius: 12px;
+}
+.contacts-info p, .contact-details p {
+    color: #50392a;
+    margin: 4px 0;
+}
+.map, .map-page {
+    width: 100%;
+    height: 240px;
+    border: 1px solid #ccb199;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+.footer {
+    background: #815921;
+    color: #fff6ec;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 1.03em;
+	    margin-top: 70px; /* добавил*/
+}
+.footer-text {
+    margin: 0;
+}
+.page-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Staff List Page Layout */
+.staff-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 22px;
+}
+.staff-item {
+    display: flex;
+    gap: 26px;
+    background: #fffdfc;
+    border-radius: 13px;
+    box-shadow: 0 1px 8px #e0ceb5cc;
+    padding: 18px 22px;
+    align-items: flex-start;
+}
+.staff-item-img { width: 200px; height: 220px; border-radius: 10px; }
+.staff-item-info { flex: 1; }
+.staff-item-name { font-size: 1.18em; font-weight: 600; color: #805118; }
+.staff-item-position { color: #98734e; font-size: 1em; font-weight: 500; margin: 6px 0; }
+.staff-item-text { color: #55412a; font-size: 1.01em; margin: 0; }
+
+
+/* Modal for Review */
+.modal { display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background: rgba(0,0,0,0.35); }
+.modal-content {
+    background: #fef7f1;
+    margin: 90px auto;
+    padding: 26px 30px;
+    border: 1px solid #a36d3b;
+    width: 97%;
+    max-width: 430px;
+    border-radius: 16px;
+    position: relative;
+    box-shadow: 0 6px 40px #876345b5;
+    color: #36271b;
+}
+.modal-close { position: absolute; top: 10px; right: 18px; color: #a36d3b; font-size: 1.4em; font-weight: 800; cursor: pointer; }
+.modal-header { display: flex; gap: 10px; align-items: baseline; margin-bottom: 17px; }
+.modal-rating { font-size: 1.21em; color: #a36d3b; }
+.modal-author { font-weight: 600; font-size: 1em; }
+.modal-date { font-size: 0.96em; color: #7e6136; margin-left: auto; }
+
+/* Articles Grid */
+
+.article-card-all{
+    background: #fffdfc;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px #d6c4b0cc;
+    padding: 20px 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.articles-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 28px; 
+    margin-top: 18px; 
+}
+
+.article-card-all.article-grid-card { 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+
+.article-img { 
+    width: 172px; 
+    height: 172px; 
+    border-radius: 15px; 
+    margin-bottom: 0; /* Убираем нижний отступ */
+    flex-shrink: 0; /* Чтобы картинка не сжималась */
+}
+
+/* Стили для текстового контента */
+.article-grid-card h3.article-title,
+.article-grid-card p.article-snippet {
+    margin: 0;
+    flex: 1; /* Текст занимает оставшееся пространство */
+}
+
+.article-title { 
+    margin-bottom: 7px !important; 
+}
+
+.article-snippet { 
+    color: #66532f; 
+    font-size: 1.04em; 
+}
+
+@media (max-width: 900px) {
+    .reviews-grid, .articles-grid { grid-template-columns: 1fr 1fr; }
+    .staff-list { gap: 20px; }
+}
+@media (max-width: 620px) {
+    .header-content { flex-direction: column; gap: 6px; height: auto; }
+    .container { padding: 0 5px; }
+    .reviews-grid, .articles-grid { grid-template-columns: 1fr; }
+    .staff-item { flex-direction: column; gap: 11px; padding: 10px 8px; }
+    .staff-item-img { width: 57px; height: 57px; }
+}
+
+/* Скрываем все статьи кроме первых 8 */
+.articles-grid .article-card:nth-child(n+9) {
+    display: none;
+}
+
+/* Класс для скрытых статей (на всякий случай) */
+.hidden-article {
+    display: none !important;
+}
+
+/* Когда статьи показываются - убираем скрытие */
+.article-card.visible {
+    display: block !important;
+}
+
+
+
+/* Стили для карточек отзывов */
+.review-card-all {
+    background: #fffdfc;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px #d6c4b0cc;
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.review-card-all:hover {
+    box-shadow: 0 4px 15px #d6c4b0cc;
+}
+
+.reviews-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 28px; 
+    margin-top: 18px; 
+}
+
+.review-card-all.review-grid-card { 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Стили для текстового контента отзывов */
+.review-grid-card h3.review-title,
+.review-grid-card p.review-snippet {
+    margin: 0;
+    flex: 1;
+}
+
+.review-title { 
+    margin-bottom: 7px !important; 
+    color: #333;
+    font-size: 1.2em;
+}
+
+.review-snippet { 
+    color: #66532f; 
+    font-size: 1.04em; 
+    line-height: 1.4;
+}
+
+/* Кнопка "Показать еще" */
+.btn-load-more {
+    display: block;
+    background: #7b4e19;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 22px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin: 20px auto;
+}
+
+.btn-load-more:hover {
+    background: #6a4316;
+}
+
+/* Скрываем все отзывы кроме первых 6 */
+.reviews-grid .review-card-all:nth-child(n+7) {
+    display: none;
+}
+
+/* Класс для скрытых отзывов */
+.hidden-review {
+    display: none !important;
+}
+
+/* Когда отзывы показываются - убираем скрытие */
+.review-card-all.visible {
+    display: flex !important;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+    .reviews-grid { 
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (max-width: 620px) {
+    .reviews-grid { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .review-card-all.review-grid-card { 
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+}
