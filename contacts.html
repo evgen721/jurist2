@@ -7,27 +7,39 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<main>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="content\logo2.png" alt="ЮрКомпания" class="logo-img">
-                    <span class="company-name">ЮрКомпания</span>
-					<button class="menu-toggle">☰</button>
-                </div>
-                <nav class="nav">
-                    <a href="index.html" class="nav-link">Главная</a>
-                    <a href="contacts.html" class="nav-link active">Контакты</a>
-                    <a href="staff.html" class="nav-link">Сотрудники</a>
-                    <a href="reviews.html" class="nav-link">Отзывы</a>
-                    <a href="articles.html" class="nav-link">Статьи</a>
-					
-                </nav>
-				
+<header class="header">
+    <div class="container">
+        <div class="header-top">
+            <div class="logo">
+                <img src="content\logo2.png" alt="ЮрКомпания" class="logo-img">
+                <span class="company-name">ООО ЮКБ «Тактик»</span>
             </div>
+            <div class="contacts">
+                <a href="tel:+79999999999" class="contact-link">☎ +7 (999) 999-99-99</a>
+                <a href="mailto:info@tactic.ru" class="contact-link">✉ info@tactic.ru</a>
+            </div>
+            <button class="menu-toggle">☰</button>
         </div>
-    </header>
+        <div class="header-bottom">
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="staff.html" class="nav-link">Команда</a>
+				<a href="practice.html" class="nav-link">Практики</a>
+                <a href="reviews.html" class="nav-link">Отзывы</a>
+                <a href="articles.html" class="nav-link">Статьи</a>
+                
+                <!-- Контакты в меню -->
+                <div class="nav-contacts">
+                    <a href="tel:+79999999999" class="nav-contact-link">☎ +7 (999) 999-99-99</a>
+                    <a href="mailto:info@tactic.ru" class="nav-contact-link">✉ info@tactic.ru</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
 
     <!-- Contacts Page Content -->
     <section class="section page-content">
@@ -36,13 +48,11 @@
             
             <div class="contacts-info-block">
                 <h2 class="subsection-title">Свяжитесь с нами</h2>
+				<p>Мы- команда высококвалифицированных юристов, с богатым бэкграундом, которые готовы погрузиться в Ваши проблемы и найти выход из сложившейся ситуации.</p>
                 <p>Наша компания всегда готова проконсультировать вас по любым юридическим вопросам. Вы можете связаться с нами удобным для вас способом.</p>
                 
                 <div class="contact-details">
-                    <div class="contact-item">
-                        <strong>Адрес офиса:</strong>
-                        <p>г. Москва, ул. Тверская, д. 10, офис 25</p>
-                    </div>
+
                     <div class="contact-item">
                         <strong>Телефон:</strong>
                         <p>+7 (495) 123-45-67</p>
@@ -53,26 +63,23 @@
                     </div>
                     <div class="contact-item">
                         <strong>Время работы:</strong>
-                        <p>Понедельник - Пятница: 9:00 - 18:00</p>
+                        <p>Понедельник - Пятница: 9:00 - 21:00</p>
                         <p>Суббота - Воскресенье: выходной</p>
                     </div>
                 </div>
             </div>
 
-            <div class="map-container-page">
-                <h2 class="subsection-title">Как нас найти</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4447337749854!2d37.60633!3d55.7558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIwLjkiTiAzN8KwMzYnMjIuOCJF!5e0!3m2!1sru!2sru!4v1234567890" 
-                        class="map-page" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+
         </div>
     </section>
-
+</main>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">© 2025 ООО ЮрКомпания, г. Екатеринбург</p>
+            <p class="footer-text">© 2025 ООО ЮКБ «Тактик», г. Екатеринбург</p>
         </div>
     </footer>
+	
 	<script src="js/menu-toggle.js"></script>
 </body>
 </html>

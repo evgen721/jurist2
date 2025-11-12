@@ -7,141 +7,61 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="content\logo2.png" alt="ЮрКомпания" class="logo-img">
-                    <span class="company-name">ЮрКомпания</span>
-					<button class="menu-toggle">☰</button>
-                </div>
-                <nav class="nav">
-                    <a href="index.html" class="nav-link">Главная</a>
-                    <a href="contacts.html" class="nav-link">Контакты</a>
-                    <a href="staff.html" class="nav-link">Сотрудники</a>
-                    <a href="reviews.html" class="nav-link active">Отзывы</a>
-                    <a href="articles.html" class="nav-link">Статьи</a>
-                </nav>			
+<header class="header">
+    <div class="container">
+        <div class="header-top">
+            <div class="logo">
+                <img src="content\logo2.png" alt="ЮрКомпания" class="logo-img">
+                <span class="company-name">ООО ЮКБ «Тактик»</span>
             </div>
+            <div class="contacts">
+                <a href="tel:+79999999999" class="contact-link">☎ +7 (999) 999-99-99</a>
+                <a href="mailto:info@tactic.ru" class="contact-link">✉ info@tactic.ru</a>
+            </div>
+            <button class="menu-toggle">☰</button>
         </div>
-    </header>
+        <div class="header-bottom">
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="staff.html" class="nav-link">Команда</a>
+				<a href="practice.html" class="nav-link">Практики</a>
+                <a href="reviews.html" class="nav-link">Отзывы</a>
+                <a href="articles.html" class="nav-link">Статьи</a>
+                
+                <!-- Контакты в меню -->
+                <div class="nav-contacts">
+                    <a href="tel:+79999999999" class="nav-contact-link">☎ +7 (999) 999-99-99</a>
+                    <a href="mailto:info@tactic.ru" class="nav-contact-link">✉ info@tactic.ru</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
 
 <section class="section page-content">
     <div class="container">
         <h1 class="page-title">Отзывы клиентов</h1>
         
         <div class="reviews-grid" id="reviewsGrid">
-            <!-- Отзыв 1 -->
-            <div class="review-card-all review-grid-card">		
-                <div class="article-content">
-                  <h3 class="review-title">Анна Петрова</h3>
-                  <p class="review-snippet">Очень благодарна за качественную юридическую консультацию. Помогли разобраться в сложном вопросе с недвижимостью.</p>
-                </div>
-            </div>
-
-            <!-- Отзыв 2 -->
-            <div class="review-card-all review-grid-card">
-                <div class="review-content">
-                  <h3 class="review-title">Иван Сидоров</h3>
-                  <p class="review-snippet">Профессионально составили договор поставки. Теперь сотрудничаем на постоянной основе. Рекомендую!</p>
-                </div>
-            </div>
-
-            <!-- Отзыв 3 -->
-            <div class="review-card-all review-grid-card">
-                <div class="review-content">
-                  <h3 class="review-title">Мария Козлова</h3>
-                  <p class="review-snippet">Быстро и грамотно решили вопрос с трудовым спором. Результат превзошел все ожидания.</p>
-                </div>
-            </div>
-
-            <!-- Отзыв 4 -->
-            <div class="review-card-all review-grid-card">
-                <div class="review-content">
-                  <h3 class="review-title">Дмитрий Волков</h3>
-                  <p class="review-snippet">Помогли в регистрации бизнеса. Все сделали оперативно и без лишних хлопот. Отличный сервис!</p>
-                </div>
-            </div>
-
-            <!-- Отзыв 5 -->
-            <div class="review-card-all review-grid-card">
-                <div class="review-content">
-                  <h3 class="review-title">Елена Смирнова</h3>
-                  <p class="review-snippet">Юристы компании сопровождали нашу сделку с коммерческой недвижимостью. Все прошло гладко и безопасно.</p>
-                </div>
-            </div>
-
-            <!-- Отзыв 6 -->
-            <div class="review-card-all review-grid-card">
-                <div class="review-content">
-                  <h3 class="review-title">Сергей Орлов</h3>
-                  <p class="review-snippet">Качественная защита интересов в суде. Профессионалы своего дела. Спасибо за положительный результат!</p>
-                </div>
-            </div>
-
-            <!-- Добавьте остальные отзывы по аналогии -->
-			
-			            <!-- Отзыв 6 -->
-            <div class="review-card-all review-grid-card">
-                <div class="review-content">
-                  <h3 class="review-title">Сергей Орлов</h3>
-                  <p class="review-snippet">Качественная защита интересов в суде. Профессионалы своего дела. Спасибо за положительный результат!</p>
-                </div>
-            </div>
-			
-			            <!-- Отзыв 6 -->
-            <div class="review-card-all review-grid-card">
-                <div class="review-content">
-                  <h3 class="review-title">Сергей Орлов</h3>
-                  <p class="review-snippet">Качественная защита интересов в суде. Профессионалы своего дела. Спасибо за положительный результат!</p>
-                </div>
-            </div>
-			
-			            <!-- Отзыв 6 -->
-            <div class="review-card-all review-grid-card">
-                <div class="review-content">
-                  <h3 class="review-title">Сергей Орлов</h3>
-                  <p class="review-snippet">Качественная защита интересов в суде. Профессионалы своего дела. Спасибо за положительный результат!</p>
-                </div>
-            </div>
-			
-			            <!-- Отзыв 6 -->
-            <div class="review-card-all review-grid-card">
-                <div class="review-content">
-                  <h3 class="review-title">Сергей Орлов</h3>
-                  <p class="review-snippet">Качественная защита интересов в суде. Профессионалы своего дела. Спасибо за положительный результат!</p>
-                </div>
-            </div>
-			
-			            <!-- Отзыв 6 -->
-            <div class="review-card-all review-grid-card">
-                <div class="review-content">
-                  <h3 class="review-title">Сергей Орлов</h3>
-                  <p class="review-snippet">Качественная защита интересов в суде. Профессионалы своего дела. Спасибо за положительный результат!</p>
-                </div>
-            </div>
-			
-			            <!-- Отзыв 6 -->
-            <div class="review-card-all review-grid-card">
-                <div class="review-content">
-                  <h3 class="review-title">Сергей Орлов</h3>
-                  <p class="review-snippet">Качественная защита интересов в суде. Профессионалы своего дела. Спасибо за положительный результат!</p>
-                </div>
-            </div>
+            <!-- Отзывы будут загружаться динамически -->
         </div>
 
-        <div class="button-container">
-            <button class="btn-load-more" id="loadMoreReviews" onclick="loadMoreReviews()">Показать еще</button>
+        <!-- Пагинация -->
+        <div class="pagination" id="pagination">
+            <!-- Номера страниц будут генерироваться динамически -->
         </div>
     </div>
 </section>
 
 
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">© 2025 ООО ЮрКомпания, г. Екатеринбург</p>
+            <p class="footer-text">© 2025 ООО ЮКБ «Тактик», г. Екатеринбург</p>
         </div>
     </footer>
 

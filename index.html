@@ -3,36 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЮрКомпания - Главная</title>
+    <title>ООО ЮКБ «Тактик»</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="content\logo2.png" alt="ЮрКомпания" class="logo-img">
-                    <span class="company-name">ЮрКомпания</span>
-					<button class="menu-toggle">☰</button>
-                </div>
-                <nav class="nav">
-                    <a href="index.html" class="nav-link active">Главная</a>
-                    <a href="contacts.html" class="nav-link">Контакты</a>
-                    <a href="staff.html" class="nav-link">Сотрудники</a>
-                    <a href="reviews.html" class="nav-link">Отзывы</a>
-                    <a href="articles.html" class="nav-link">Статьи</a>
-                </nav>
-				
+<main>
+
+<header class="header">
+    <div class="container">
+        <div class="header-top">
+            <div class="logo">
+                <img src="content\logo2.png" alt="ЮрКомпания" class="logo-img">
+                <span class="company-name">ООО ЮКБ «Тактик»</span>
             </div>
+            <div class="contacts">
+                <a href="tel:+79999999999" class="contact-link">☎ +7 (999) 999-99-99</a>
+                <a href="mailto:info@tactic.ru" class="contact-link">✉ info@tactic.ru</a>
+            </div>
+            <button class="menu-toggle">☰</button>
         </div>
-    </header>
+        <div class="header-bottom">
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="staff.html" class="nav-link">Команда</a>
+				<a href="practice.html" class="nav-link">Практики</a>
+                <a href="reviews.html" class="nav-link">Отзывы</a>
+                <a href="articles.html" class="nav-link">Статьи</a>
+                
+                <!-- Контакты в меню -->
+                <div class="nav-contacts">
+                    <a href="tel:+79999999999" class="nav-contact-link">☎ +7 (999) 999-99-99</a>
+                    <a href="mailto:info@tactic.ru" class="nav-contact-link">✉ info@tactic.ru</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
 
     <!-- Banner -->
     <section class="banner">
         <img src="content\banner.png" alt="Баннер" class="banner-img">
         <div class="banner-overlay">
-            <h1 class="banner-title">Профессиональные юридические услуги для вашего бизнеса</h1>
+            <h1 class="banner-title">Именно мы приведем Вас к желаемому результату.</h1>
         </div>
     </section>
 
@@ -41,10 +55,7 @@
         <div class="container">
             <h2 class="section-title">О компании</h2>
             <p class="about-text">
-                ЮрКомпания — это команда профессионалов с многолетним опытом работы в области юриспруденции. 
-                Мы предоставляем полный спектр юридических услуг для физических и юридических лиц. 
-                Наша цель — защита ваших интересов и достижение наилучших результатов в каждом деле. 
-                Мы ценим доверие наших клиентов и гарантируем индивидуальный подход к каждой ситуации.
+               Мы- команда высококвалифицированных юристов, с богатым бэкграундом, которые готовы погрузиться в Ваши проблемы и найти выход из сложившейся ситуации.
             </p>
         </div>
     </section>
@@ -101,13 +112,13 @@
     <!-- Staff Slider Section -->
     <section class="section staff-slider-section">
         <div class="container">
-            <h2 class="section-title">Наши сотрудники</h2>
+            <h2 class="section-title">Наша команда</h2>
             <div class="slider">
                 <div class="slider-track" id="staffSlider">
                     <div class="staff-card">
-                        <img src="content\woman.png" alt="Сотрудник" class="staff-img">
-                        <h3 class="staff-name">Иванова Елена Сергеевна</h3>
-                        <p class="staff-desc">Главный юрист, специалист по корпоративному праву</p>
+                        <img src="content\BDW.jpg" alt="Сотрудник" class="staff-img">
+                        <h3 class="staff-name">Булатов Дмитрий Владимирович</h3>
+                        <p class="staff-desc">Руководитель, главный юрист. Магистр юридических наук. Два высших юридических образования.</p>
                     </div>
                     <div class="staff-card">
                         <img src="content\man3.png" alt="Сотрудник" class="staff-img">
@@ -197,23 +208,19 @@
             <h2 class="section-title">Контакты</h2>
             <div class="contacts-content">
                 <div class="contacts-info">
-                    <p><strong>Адрес:</strong> г. Москва, ул. Тверская, д. 10, офис 25</p>
                     <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
                     <p><strong>Email:</strong> info@urcompany.ru</p>
-                    <p><strong>Время работы:</strong> Пн-Пт: 9:00 - 18:00</p>
+                    <p><strong>Время работы:</strong> Пн-Пт: 9:00 - 21:00</p>
                 </div>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4447337749854!2d37.60633!3d55.7558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIwLjkiTiAzN8KwMzYnMjIuOCJF!5e0!3m2!1sru!2sru!4v1234567890" 
-                            class="map" allowfullscreen="" loading="lazy"></iframe>
-                </div>
+
             </div>
         </div>
     </section>
-
+</main>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">© 2025 ООО ЮрКомпания, г. Екатеринбург</p>
+            <p class="footer-text">© 2025 ООО ЮКБ «Тактик», г.&nbspЕкатеринбург</p>
         </div>
     </footer>
 
