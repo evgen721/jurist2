@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЮрКомпания - Статьи</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
+        .modal-content { background: white; margin: 5% auto; padding: 20px; width: 80%; max-width: 600px; border-radius: 8px; }
+        .close { float: right; font-size: 24px; cursor: pointer; }
+        .review-card { border: 1px solid #ddd; padding: 15px; margin: 10px 0; cursor: pointer; }
+        .review-card:hover { background: #f9f9f9; }
+    </style>
+	
+	    <!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="logo">
+                <img src="content\logo3.png" alt="ЮрКомпания" class="logo-img">
+            </div>
+            <div class="header-right">
+                <div class="header-top">
+                    <div class="contacts">
+                        <a href="tel:+79122295031" class="contact-link">☎ +7 (912) 229-50-31</a>
+                        <a href="mailto:yukb.taktic@mail.ru" class="contact-link">✉ yukb.taktic@mail.ru</a>
+                    </div>
+                    <button class="menu-toggle">☰</button>
+                </div>
+                <div class="header-bottom">
+                    <nav class="nav">
+                        <a href="index.html" class="nav-link">Главная</a>
+                        <a href="contacts.html" class="nav-link">Контакты</a>
+                        <a href="staff.html" class="nav-link">Команда</a>
+                         <!--<a href="practice.html" class="nav-link">Практики</a>
+                        <a href="reviews.html" class="nav-link">Отзывы</a>
+                        <a href="articles.html" class="nav-link">Статьи</a>-->
+                        
+                        <!-- Контакты в меню -->
+                        <div class="nav-contacts">
+                            <a href="tel:+79122295031" class="nav-contact-link">☎ +7 (912) 229-50-31</a>
+                            <a href="mailto:yukb.taktic@mail.ru" class="nav-contact-link">✉ yukb.taktic@mail.ru</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+	
+</head>
+<body>
+
+<!-- Блок отзывов на странице -->
+<div class="reviews-preview">
+    <h2>Отзывы клиентов</h2>
+    <div id="reviews-container">
+        <!-- Отзывы загрузятся сюда -->
+    </div>
+</div>
+
+<!-- Модальное окно -->
+<div id="review-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-content">
+            <!-- Контент модального окна -->
+        </div>
+    </div>
+</div>
+
+<script>
+class ReviewManager {
+    constructor() {
+        this.reviews = [];
+        this.modal = document.getElementById('review-modal');
+        this.init();
+    }
+    
+    async init() {
+        await this.loadReviews();
+        this.renderPreview();
+        this.setupEventListeners();
+    }
+    
+    async loadReviews() {
+        try {
+            const response = await fetch('reviews.json');
+            const data = await response.json();
+            this.reviews = data.reviews;
+        } catch (error) {
+            console.error('Ошибка загрузки отзывов:', error);
+        }
+    }
+    
+    renderPreview() {
+        const container = document.getElementById('reviews-container');
+        
+        this.reviews.forEach(review => {
+            const reviewElement = this.createPreviewElement(review);
+            container.appendChild(reviewElement);
+        });
+    }
+    
+    createPreviewElement(review) {
+        const div = document.createElement('div');
+        div.className = 'review-card';
+        div.dataset.reviewId = review.id;
+        
+        // Превью отзыва (укороченная версия)
+        div.innerHTML = `
+            <h4>${this.escapeHtml(review.author)}</h4>
+            <p><em>${this.escapeHtml(review.position)}</em></p>
+            <p>${this.getExcerpt(review.text, 100)}...</p>
+            <div class="rating">${'★'.repeat(review.rating)}</div>
+            <small>Читать полный отзыв →</small>
+        `;
+        
+        return div;
+    }
+    
+    openModal(reviewId) {
+        const review = this.reviews.find(r => r.id === reviewId);
+        if (!review) return;
+        
+        const modalContent = document.getElementById('modal-content');
+        modalContent.innerHTML = this.createModalContent(review);
+        
+        this.modal.style.display = 'block';
+    }
+    
+    createModalContent(review) {
+        return `
+            <h2>Отзыв клиента</h2>
+            <div class="review-full">
+                <div class="review-header">
+                    <h3>${this.escapeHtml(review.author)}</h3>
+                    <p><strong>${this.escapeHtml(review.position)}</strong></p>
+                    <div class="rating">${'★'.repeat(review.rating)}</div>
+                </div>
+                <div class="review-text">
+                    <blockquote>${this.escapeHtml(review.text)}</blockquote>
+                </div>
+                <div class="review-meta">
+                    <time datetime="${review.date}">${this.formatDate(review.date)}</time>
+                    <span class="practice">${this.getPracticeName(review.practice)}</span>
+                </div>
+            </div>
+        `;
+    }
+    
+    setupEventListeners() {
+        // Закрытие по клику вне окна
+        this.modal.addEventListener('click', (e) => {
+            if (e.target === this.modal) this.closeModal();
+        });
+        
+        // Закрытие по ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') this.closeModal();
+        });
+        
+        // Открытие по клику на карточку
+        document.addEventListener('click', (e) => {
+            const card = e.target.closest('.review-card');
+            if (card) {
+                this.openModal(card.dataset.reviewId);
+            }
+        });
+    }
+    
+    closeModal() {
+        this.modal.style.display = 'none';
+    }
+    
+    // Вспомогательные методы
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+    
+    getExcerpt(text, length) {
+        return text.length > length ? text.substring(0, length) : text;
+    }
+    
+    formatDate(dateString) {
+        return new Date(dateString).toLocaleDateString('ru-RU');
+    }
+    
+    getPracticeName(practiceId) {
+        const practices = {
+            'corporate-law': 'Корпоративное право',
+            'ip-law': 'Интеллектуальная собственность'
+        };
+        return practices[practiceId] || practiceId;
+    }
+}
+
+// Инициализация
+const reviewManager = new ReviewManager();
+
+// Глобальные функции для onclick (если нужно)
+function closeModal() {
+    reviewManager.closeModal();
+}
+</script>
+
+</body>
+</html>
