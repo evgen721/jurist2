@@ -436,7 +436,9 @@ margin: 0;
 
 @media (max-width: 700px) {
     .header {
-        position: relative;
+        		position: sticky;
+    top: 0;
+    z-index: 1000;
     }
     
     .header-wrapper {
@@ -884,5 +886,4 @@ margin: 0;
             font-weight: bold;
             position: absolute;
             left: -15px;
-
         }
