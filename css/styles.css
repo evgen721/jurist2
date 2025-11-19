@@ -23,7 +23,7 @@ main, .content {
 
 .header {
     background: #013220;
-    color: #fff;
+    color: #ffe4bb;
     padding: 0;
 		position: sticky;
     top: 0;
@@ -226,7 +226,7 @@ main, .content {
 .review-card, .staff-card, .article-card {
     background: #fffdfc;
     border-radius: 14px;
-    box-shadow: 0 2px 10px #d6c4b0cc;
+    box-shadow: 0 2px 5px #d6c4b0cc;
     padding: 20px 18px;
     min-width: 240px;
     max-width: 285px;
@@ -257,7 +257,7 @@ main, .content {
     width: 150px; height: 150px;
     border-radius: 15%;
     object-fit: cover;
-    background: #c7a77d;
+    background: linear-gradient(135deg, #c7a77d 0%, #e9d4b3 50%, #a67c52 100%);
     margin-bottom: 8px;
 }
 .staff-name, .article-title {
@@ -338,9 +338,9 @@ main, .content {
 }
 .staff-item-img { 
 width: 200px; 
-height: 220px; 
+height: 200px; 
 border-radius: 10px; 
-background: #c7a77d;
+background: linear-gradient(135deg, #c7a77d 0%, #e9d4b3 50%, #a67c52 100%);
 }
 
 .staff-item-info { 
@@ -763,21 +763,23 @@ margin: 0;
 /* Табы */
         .tabs-header {
             display: flex;
-            background: #f8f9fa;
+            
             border-bottom: 2px solid #e9ecef;
+			border-radius: 15px 15px 0 0;
         }
 
         .tab-btn {
             flex: 1;
             padding: 25px 20px;
             border: none;
-            background: transparent;
+            background: #e5e5e5;
             font-size: 18px;
             font-weight: 600;
             color: #6c757d;
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
+			border-radius: 15px 15px 0 0;
         }
 
         .tab-btn:hover {
@@ -804,6 +806,7 @@ margin: 0;
             display: none;
             padding: 40px;
             animation: fadeIn 0.5s ease;
+			background: #ffffff;
         }
 
         .tab-content.active {
@@ -823,7 +826,7 @@ margin: 0;
         display: inline;
     }
 	.tab-content {
-        padding: 0px;     
+        padding-left: 20px;   
     }
 }
 
