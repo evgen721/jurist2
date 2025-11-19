@@ -157,6 +157,7 @@ main, .content {
     font-weight: 700;
     text-shadow: 1px 2px 12px #6b4113;
     letter-spacing: 1px;
+	padding: 0 18px;
 }
 .container {
     max-width: 1200px;
