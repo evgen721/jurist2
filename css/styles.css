@@ -15,7 +15,6 @@ html, body {
 
 }
 
-/* Основной контент должен быть обернут в main или div с классом */
 main, .content {
     flex: 1;
 }
@@ -339,7 +338,7 @@ main, .content {
 }
 .staff-item-img { 
 width: 200px; 
-height: 200px; 
+height: 210px; 
 border-radius: 10px; 
 background: linear-gradient(135deg, #c7a77d 0%, #e9d4b3 50%, #a67c52 100%);
 }
@@ -548,13 +547,15 @@ margin: 0;
     .nav-contact-link:hover {
         color: #fff;
     }
+	
+	.banner {
+    height: 250px;
+    }
 }
 	
 	
 @media (max-width: 450px) {
-    .logo-img {
-        height: 40px;
-    }
+
     
     .banner-title {    
         font-size: 1.4em;
