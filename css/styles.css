@@ -231,8 +231,7 @@ main, .content {
     border-radius: 14px;
     box-shadow: 0 2px 5px #d6c4b0cc;
     padding: 20px 18px;
-    min-width: 240px;
-    max-width: 285px;
+    width: 230px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -305,6 +304,13 @@ main, .content {
     color: #50392a;
     margin: 4px 0;
 }
+
+
+.contact-item {
+margin-top: 15px;
+}
+
+/* Футер */
 
 .footer {
     background: #493212;
