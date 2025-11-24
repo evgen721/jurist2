@@ -11,11 +11,11 @@
       "documents": [
         {
           "name": "Диплом о высшем образовании",
-          "image": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=200&h=300&fit=crop"
+          "image": "content/BDW2.png"
         },
         {
           "name": "AWS Certified",
-          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=300&fit=crop"
+          "image": "https://www.ofsetpodolsk.ru/media/2024/08/Diplom_spech-s-otl.jpg"
         },
         {
           "name": "React Professional",
