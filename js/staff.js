@@ -83,51 +83,56 @@ function createEmployeeCards(data) {
         modal.id = employee.id;
         modal.className = 'modal';
         
-        modal.innerHTML = `
-            <div class="modal-content">
-                <button class="close-btn" onclick="closeModal('${employee.id}')">&times;</button>
-                <div class="employee-detail">
-                    <div class="employee-header">
-                        <img src="${employee.photo}" alt="${employee.name}" class="employee-photo">
-                        <div>
-                            <h2 class="employee-name-large">${employee.name}</h2>
-                            <p class="employee-position-large">${employee.position}</p>
-                            <div class="employee-info">
-                                <div class="info-row">
-                                    <span class="info-label">Образование:</span>
-                                    <span class="info-value">${employee.education}</span>
-                                </div>
-                                <div class="info-row">
-                                    <span class="info-label">Опыт работы:</span>
-                                    <span class="info-value">${employee.experience}</span>
-                                </div>
-                            </div>
+modal.innerHTML = `
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('${employee.id}')">&times;</button>
+        <div class="employee-detail">
+            <div class="employee-header">
+                <img src="${employee.photo}" alt="${employee.name}" class="employee-photo">
+                <div>
+                    <h2 class="employee-name-large">${employee.name}</h2>
+                    <p class="employee-position-large">${employee.position}</p>
+                    <div class="employee-info">
+                        <div class="info-row">
+                            <span class="info-label">Образование:</span>
+                            <span class="info-value">${employee.education}</span>
                         </div>
-                    </div>
-
-                    <div class="description-section">
-                        <h3 class="section-title">О сотруднике</h3>
-                        <p class="description-text">${employee.description}</p>
-                    </div>
-
-                    <div class="documents-section">
-                        <h3 class="section-title">Документы и сертификаты</h3>
-                        <div class="documents-grid">
-                            ${employee.documents.map(doc => `
-                                <div class="document-item">
-                                    <img src="${doc.image}" alt="${doc.name}" class="document-image">
-                                    <div class="document-name">${doc.name}</div>
-                                </div>
-                            `).join('')}
+                        <div class="info-row">
+                            <span class="info-label">Опыт работы:</span>
+                            <span class="info-value">${employee.experience}</span>
                         </div>
                     </div>
                 </div>
             </div>
-        `;
-        
-        if (modalsContainer) {
-            modalsContainer.appendChild(modal);
-        }
+
+            <div class="description-section">
+                <h3 class="section-title">О сотруднике</h3>
+                <p class="description-text">${employee.description}</p>
+            </div>
+
+            <div class="documents-section">
+                <h3 class="section-title">Документы и сертификаты</h3>
+                <div class="documents-grid">
+                    ${employee.documents.map(doc => `
+                        <div class="document-item">
+                             <a href="${doc.image}" target="_blank" class="document-link">
+                        <img src="${doc.image}" alt="${doc.name}" class="document-image">
+                    </a>
+                            <div class="document-name">${doc.name}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            <button class="mobile-close-btn" onclick="closeModal('${employee.id}')">Закрыть</button>
+        </div>
+    </div>
+	
+	
+`;
+
+if (modalsContainer) {
+    modalsContainer.appendChild(modal);
+}
     });
 }
 
