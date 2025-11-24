@@ -18,88 +18,118 @@
         }
 
         // Функция для создания карточек сотрудников с вашими классами
-        function createEmployeeCards(data) {
-            const staffList = document.getElementById('staffList');
-            const modalsContainer = document.getElementById('modalsContainer');
+function createEmployeeCards(data) {
+    const staffList = document.getElementById('staffList');
+    const staffSlider = document.getElementById('staffSlider');
+    const modalsContainer = document.getElementById('modalsContainer');
+    
+    // Очищаем контейнеры только если они существуют
+    if (staffList) staffList.innerHTML = '';
+    if (staffSlider) staffSlider.innerHTML = '';
+    if (modalsContainer) modalsContainer.innerHTML = '';
+
+    // Проверяем, есть ли данные
+    if (!data || !data.employees || data.employees.length === 0) {
+        if (staffList) staffList.innerHTML = '<div class="error">Нет данных о сотрудниках</div>';
+        if (staffSlider) staffSlider.innerHTML = '<div class="error">Нет данных о сотрудниках</div>';
+        return;
+    }
+
+    // Создаем карточки для каждого сотрудника
+    data.employees.forEach(employee => {
+        // 1. Карточка для основного списка (.staff-list) - если элемент существует
+        if (staffList) {
+            const staffItem = document.createElement('div');
+            staffItem.className = 'staff-item';
+            staffItem.onclick = () => openModal(employee.id);
             
-            // Очищаем контейнеры
-            staffList.innerHTML = '';
-            modalsContainer.innerHTML = '';
-
-            // Проверяем, есть ли данные
-            if (!data || !data.employees || data.employees.length === 0) {
-                staffList.innerHTML = '<div class="error">Нет данных о сотрудниках</div>';
-                return;
-            }
-
-            // Создаем карточки для каждого сотрудника
-            data.employees.forEach(employee => {
-                // Создаем карточку для сетки с вашими классами
-                const staffItem = document.createElement('div');
-                staffItem.className = 'staff-item';
-                staffItem.onclick = () => openModal(employee.id);
-                
-                staffItem.innerHTML = `
-                    <img src="${employee.photo}" alt="${employee.name}" class="staff-item-img">
-                    <div class="staff-item-info">
-                        <h3 class="staff-item-name">${employee.name}</h3>
-                        <p class="staff-item-position">${employee.position}</p>
+            staffItem.innerHTML = `
+                <img src="${employee.photo}" alt="${employee.name}" class="staff-item-img">
+                <div class="staff-item-info">
+                    <h3 class="staff-item-name">${employee.name}</h3>
+                    <p class="staff-item-position">${employee.position}</p>
+					
+					<div class="info-row">
+                                    <span class="info-label">Образование:</span>
+                                    <span class="info-value">${employee.education}</span>
                     </div>
-                `;
-                
-                staffList.appendChild(staffItem);
+					<div class="info-row">
+                                    <span class="info-label">Опыт работы:</span>
+                                    <span class="info-value">${employee.experience}</span>
+                    </div>
+                </div>
+            `;
+            
+            staffList.appendChild(staffItem);
+        }
 
-                // Создаем модальное окно (остается без изменений)
-                const modal = document.createElement('div');
-                modal.id = employee.id;
-                modal.className = 'modal';
-                
-                modal.innerHTML = `
-                    <div class="modal-content">
-                        <button class="close-btn" onclick="closeModal('${employee.id}')">&times;</button>
-                        <div class="employee-detail">
-                            <div class="employee-header">
-                                <img src="${employee.photo}" alt="${employee.name}" class="employee-photo">
-                                <div>
-                                    <h2 class="employee-name-large">${employee.name}</h2>
-                                    <p class="employee-position-large">${employee.position}</p>
-                                    <div class="employee-info">
-                                        <div class="info-row">
-                                            <span class="info-label">Образование:</span>
-                                            <span class="info-value">${employee.education}</span>
-                                        </div>
-                                        <div class="info-row">
-                                            <span class="info-label">Опыт работы:</span>
-                                            <span class="info-value">${employee.experience}</span>
-                                        </div>
-                                        
-                                    </div>
+        // 2. Карточка для слайдера (.slider-track) - если элемент существует
+        if (staffSlider) {
+            const staffCard = document.createElement('div');
+            staffCard.className = 'staff-card';
+            staffCard.onclick = () => openModal(employee.id);
+            
+            staffCard.innerHTML = `
+                <img src="${employee.photo}" alt="${employee.name}" class="staff-img">
+                <h3 class="staff-name">${employee.name}</h3>
+                <p class="staff-desc">${employee.position}</p>
+            `;
+            
+            staffSlider.appendChild(staffCard);
+        }
+
+        // 3. Модальное окно (всегда создаем, даже если modalsContainer не найден)
+        const modal = document.createElement('div');
+        modal.id = employee.id;
+        modal.className = 'modal';
+        
+        modal.innerHTML = `
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('${employee.id}')">&times;</button>
+                <div class="employee-detail">
+                    <div class="employee-header">
+                        <img src="${employee.photo}" alt="${employee.name}" class="employee-photo">
+                        <div>
+                            <h2 class="employee-name-large">${employee.name}</h2>
+                            <p class="employee-position-large">${employee.position}</p>
+                            <div class="employee-info">
+                                <div class="info-row">
+                                    <span class="info-label">Образование:</span>
+                                    <span class="info-value">${employee.education}</span>
                                 </div>
-                            </div>
-
-                            <div class="description-section">
-                                <h3 class="section-title">О сотруднике</h3>
-                                <p class="description-text">${employee.description}</p>
-                            </div>
-
-                            <div class="documents-section">
-                                <h3 class="section-title">Документы и сертификаты</h3>
-                                <div class="documents-grid">
-                                    ${employee.documents.map(doc => `
-                                        <div class="document-item">
-                                            <img src="${doc.image}" alt="${doc.name}" class="document-image">
-                                            <div class="document-name">${doc.name}</div>
-                                        </div>
-                                    `).join('')}
+                                <div class="info-row">
+                                    <span class="info-label">Опыт работы:</span>
+                                    <span class="info-value">${employee.experience}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                `;
-                
-                modalsContainer.appendChild(modal);
-            });
+
+                    <div class="description-section">
+                        <h3 class="section-title">О сотруднике</h3>
+                        <p class="description-text">${employee.description}</p>
+                    </div>
+
+                    <div class="documents-section">
+                        <h3 class="section-title">Документы и сертификаты</h3>
+                        <div class="documents-grid">
+                            ${employee.documents.map(doc => `
+                                <div class="document-item">
+                                    <img src="${doc.image}" alt="${doc.name}" class="document-image">
+                                    <div class="document-name">${doc.name}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        if (modalsContainer) {
+            modalsContainer.appendChild(modal);
         }
+    });
+}
 
         // Функции для работы с модальными окнами
         function openModal(employeeId) {
