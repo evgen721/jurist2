@@ -18,8 +18,8 @@
       "docs": [],
 
       "attachments": [
-        { "title": "Скрин 1", "url": "/content/reviews/1.jpg", "type": "image" },
-        { "title": "Скрин 2", "url": "/content/reviews/2.jpg", "type": "image" }
+        { "title": "Скрин 1", "url": "content/reviews/1.jpg", "type": "image" },
+        { "title": "Скрин 2", "url": "content/reviews/2.jpg", "type": "image" }
       ],
 
       "status": "published"
@@ -44,7 +44,7 @@
       ],
 
       "attachments": [
-        { "title": "Скрин 2", "url": "/content/reviews/2.jpg", "type": "image" }
+        { "title": "Скрин 2", "url": "content/reviews/2.jpg", "type": "image" }
       ],
 
       "status": "published"
