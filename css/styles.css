@@ -1443,13 +1443,30 @@ margin: 0;
   letter-spacing: 1px;
 }
 
-/* ----------------------- */
 /* СТРАНИЦА ВСЕХ ОТЗЫВОВ: 2 колонки */
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   margin-top: 18px;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .review-grid-card {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .review-grid-img {
+    width: 100%;
+    height: 200px;
+  }
 }
 
 .review-grid-card {
@@ -1476,6 +1493,21 @@ margin: 0;
   object-fit: cover;
   background: linear-gradient(135deg, #c7a77d 0%, #e9d4b3 50%, #a67c52 100%);
   flex-shrink: 0;
+}
+
+/* Стиль для плейсхолдера картинки */
+.review-grid-img--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7a6246;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 10px;
+}
+
+.review-grid-img--placeholder span {
+  max-width: 80%;
 }
 
 .review-grid-info {
@@ -1509,8 +1541,29 @@ margin: 0;
   color: #55412a;
   font-size: 1.01em;
   line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Ограничиваем до 3 строк */
+  -webkit-box-orient: vertical;
+  max-height: 4.5em; /* Примерно 3 строки * 1.5 line-height */
 }
 
+/* Для старых браузеров, где не поддерживается line-clamp */
+.review-grid-text.truncated {
+  position: relative;
+  max-height: 4.5em;
+  overflow: hidden;
+}
+
+.review-grid-text.truncated::after {
+  content: '...';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fffdfc;
+  padding: 0 3px;
+}
 
 /* ----------------------- */
 /* Новая структура модалки отзыва */
@@ -1531,8 +1584,8 @@ margin: 0;
 }
 
 .review-title-new {
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 600;
   color: #2c3e50;
   margin: 0 0 15px 0;
   line-height: 1.2;
@@ -1550,7 +1603,7 @@ margin: 0;
   display: flex;
   align-items: center;
   background: #f8f1e6;
-  padding: 6px 16px;
+  padding: 2px 16px;
   border-radius: 6px;
   border: 1px solid #a36d3b;
 }
@@ -1564,7 +1617,7 @@ margin: 0;
   font-size: 0.9rem;
   color: #805118;
   font-weight: 500;
-  padding: 6px 15px;
+  padding: 2px 16px;
   background: #f8f1e6;
   border-radius: 6px;
   border: 1px solid #a36d3b;
@@ -1596,7 +1649,7 @@ margin: 0;
 }
 
 .info-label {
-  font-weight: 600;
+  font-weight: 700;
   color: #805118;
   min-width: 80px;
 }
@@ -1742,54 +1795,9 @@ margin: 0;
 }
 
 /* ----------------------- */
-/* Адаптив */
+/* АДАПТИВ ДЛЯ МОБИЛЬНЫХ */
 @media (max-width: 768px) {
-  .review-detail {
-    padding: 30px 20px 25px;
-  }
   
-  .review-title-new {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-  
-  .review-meta-row {
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .review-date-modal {
-    margin-left: 0;
-    width: 100%;
-    text-align: center;
-    padding-right: 0;
-  }
-  
-  .review-text-header {
-    padding: 18px 20px;
-  }
-  
-  .review-text-content {
-    padding: 20px;
-  }
-  
-  .review-text-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .review-attachments-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-  
-  .info-row {
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .info-label {
-    min-width: auto;
-  }
   
   .mobile-close-btn {
     display: block;
@@ -1812,20 +1820,5 @@ margin: 0;
   
   .close-btn {
     display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .review-title-new {
-    font-size: 1.6rem;
-  }
-  
-  .review-meta-row {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .review-attachments-grid {
-    grid-template-columns: 1fr;
   }
 }
