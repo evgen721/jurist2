@@ -4,7 +4,7 @@
       "id": "rev-001",
       "date": "2026-01-10",
       "author": "Алексей",
-      "authorRole": "ИП",
+      "authorRole": "Физ. лицо",
       "rating": 5,
 
       "lawArea": ["Трудовое право"],
@@ -19,7 +19,7 @@
 
       "attachments": [
         { "title": "Скрин 1", "url": "content/reviews/1.jpg", "type": "image" },
-        { "title": "Скрин 2", "url": "content/reviews/2.jpg", "type": "image" }
+        { "title": "Скрин 3", "url": "content/reviews/3.jpg", "type": "image" }
       ],
 
       "status": "published"
@@ -39,9 +39,7 @@
       "text": "",
 
       "tags": ["суд", "взыскание"],
-      "docs": [
-        { "title": "Решение суда", "url": "/docs/rev-001/decision.pdf", "type": "pdf" }
-      ],
+      "docs": [],
 
       "attachments": [
         { "title": "Скрин 2", "url": "content/reviews/2.jpg", "type": "image" }
@@ -53,7 +51,7 @@
       "id": "rev-003",
       "date": "2025-01-10",
       "author": "Ирина",
-      "authorRole": "ОАО",
+      "authorRole": "ИП",
       "rating": 5,
 
       "lawArea": ["Трудовое право"],
@@ -74,8 +72,8 @@
       "id": "rev-004",
       "date": "2025-01-10",
       "author": "Ирина",
-      "authorRole": "ОАО",
-      "rating": 5,
+      "authorRole": "Юр. лицо",
+      "rating": 4,
 
       "lawArea": ["Трудовое право"],
       "problem": "Спор с работодателем по выплатам",
@@ -90,8 +88,8 @@
       ],
 
       "attachments": [
-        { "title": "Скрин 1", "url": "/img/rev-001/screen-1.jpg", "type": "image" },
-        { "title": "Скрин 2", "url": "/img/rev-001/screen-2.jpg", "type": "image" }
+        { "title": "Скрин 1", "url": "content/reviews/2.jpg", "type": "image" },
+        { "title": "Скрин 2", "url": "content/reviews/3.jpg", "type": "image" }
       ],
 
       "status": "published"
