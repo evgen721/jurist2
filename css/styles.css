@@ -1573,7 +1573,7 @@ margin: 0;
 }
 
 .review-detail {
-  padding: 40px 40px 30px;
+  padding: 25px 20px;
 }
 
 /* Новый заголовок */
@@ -1797,7 +1797,32 @@ margin: 0;
 /* ----------------------- */
 /* АДАПТИВ ДЛЯ МОБИЛЬНЫХ */
 @media (max-width: 768px) {
+    .review-text-header {
+    padding: 18px 20px;
+  }
   
+  .review-text-content {
+    padding: 20px;
+  }
+  
+  .review-text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .review-attachments-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .info-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .info-label {
+    min-width: auto;
+  }
   
   .mobile-close-btn {
     display: block;
