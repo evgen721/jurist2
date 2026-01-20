@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юридическая компания - Главная</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .marketing-blocks {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: #1a3a5f;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: #d4af37;
+            margin: 15px auto;
+        }
+        
+        .blocks-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .block {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            border-top: 4px solid #1a3a5f;
+        }
+        
+        .block:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .block-icon {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        
+        .block-title {
+            font-size: 1.5rem;
+            color: #1a3a5f;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .block-text {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .block-1 {
+            border-top-color: #1a3a5f;
+        }
+        
+        .block-2 {
+            border-top-color: #2c5f8a;
+        }
+        
+        .block-3 {
+            border-top-color: #3f7db3;
+        }
+        
+        .block-4 {
+            border-top-color: #d4af37;
+        }
+        
+        @media (max-width: 768px) {
+            .blocks-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="marketing-blocks">
+        <h2 class="section-title">Почему выбирают нас</h2>
+        
+        <div class="blocks-container">
+            <div class="block block-1">
+                <div class="block-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3 class="block-title">Опыт и профессионализм</h3>
+                <p class="block-text">Более 15 лет успешной юридической практики. Наши специалисты решают сложные правовые задачи любой категории сложности.</p>
+            </div>
+            
+            <div class="block block-2">
+                <div class="block-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3 class="block-title">Индивидуальный подход</h3>
+                <p class="block-text">Мы внимательно изучаем каждую ситуацию и разрабатываем персональную стратегию защиты ваших интересов.</p>
+            </div>
+            
+            <div class="block block-3">
+                <div class="block-icon">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h3 class="block-title">Защита в суде</h3>
+                <p class="block-text">Представительство в судебных инстанциях всех уровней. Мы добиваемся справедливости даже в самых сложных делах.</p>
+            </div>
+            
+            <div class="block block-4">
+                <div class="block-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 class="block-title">Честность и прозрачность</h3>
+                <p class="block-text">Мы работаем на результат и предоставляем полную отчетность о ходе ведения вашего дела на всех этапах.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
