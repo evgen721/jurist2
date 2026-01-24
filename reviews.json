@@ -6,144 +6,2074 @@
       "author": "Алексей",
       "authorRole": "Физ. лицо",
       "rating": 5,
-
-      "lawArea": ["Трудовое право"],
+      "lawArea": [
+        "Трудовое право"
+      ],
       "problem": "Спор с работодателем по выплатам",
       "goal": "Взыскать задолженность и компенсацию",
       "result": "Получили выплаты и компенсацию",
-
       "text": "Отличная работа: быстро разобрались в документах, всё объяснили/ Отличная работа: быстро разобрались в документах, всё объяснили. Отличная работа: быстро разобрались в документах, всё объяснили. Отличная работа: быстро разобрались в документах, всё объяснили.  Отличная работа: быстро разобрались в документах, всё объяснили. Отличная работа: быстро разобрались в документах, всё объяснили. Отличная работа: быстро разобрались в документах, всё объяснили. ",
-
-      "tags": ["суд", "взыскание"],
-      "docs": [],
-
-      "attachments": [
-        { "title": "Скрин 1", "url": "content/reviews/1.jpg", "type": "image" },
-        { "title": "Скрин 3", "url": "content/reviews/3.jpg", "type": "image" }
+      "tags": [
+        "суд",
+        "взыскание"
       ],
-
+      "docs": [],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "content/reviews/1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 3",
+          "url": "content/reviews/3.jpg",
+          "type": "image"
+        }
+      ],
       "status": "published"
     },
-	{
+    {
       "id": "rev-002",
       "date": "2025-01-10",
       "author": "Ирина",
       "authorRole": "ОАО",
       "rating": 5,
-
-      "lawArea": ["Трудовое право"],
+      "lawArea": [
+        "Трудовое право"
+      ],
       "problem": "Спор с работодателем по выплатам",
       "goal": "Взыскать задолженность и компенсацию",
       "result": "Получили выплаты и компенсацию",
-
       "text": "",
-
-      "tags": ["суд", "взыскание"],
-      "docs": [],
-
-      "attachments": [
-        { "title": "Скрин 2", "url": "content/reviews/2.jpg", "type": "image" }
+      "tags": [
+        "суд",
+        "взыскание"
       ],
-
+      "docs": [],
+      "attachments": [
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        }
+      ],
       "status": "published"
     },
-	{
+    {
       "id": "rev-003",
       "date": "2025-01-10",
       "author": "Ирина",
       "authorRole": "ИП",
       "rating": 5,
-
-      "lawArea": ["Трудовое право"],
+      "lawArea": [
+        "Трудовое право"
+      ],
       "problem": "Спор с работодателем по выплатам",
       "goal": "Взыскать задолженность и компенсацию",
       "result": "Получили выплаты и компенсацию",
-
       "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
-
-      "tags": ["суд", "взыскание"],
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
       "docs": [],
-
       "attachments": [],
-
       "status": "published"
     },
-	{
+    {
       "id": "rev-004",
       "date": "2025-01-10",
       "author": "Ирина",
       "authorRole": "Юр. лицо",
       "rating": 4,
-
-      "lawArea": ["Трудовое право"],
+      "lawArea": [
+        "Трудовое право"
+      ],
       "problem": "Спор с работодателем по выплатам",
       "goal": "Взыскать задолженность и компенсацию",
       "result": "Получили выплаты и компенсацию",
-
       "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
-
-      "tags": ["суд", "взыскание"],
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
       "docs": [
-        { "title": "Решение суда", "url": "/docs/rev-001/decision.pdf", "type": "pdf" }
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
       ],
-
       "attachments": [
-        { "title": "Скрин 1", "url": "content/reviews/2.jpg", "type": "image" },
-        { "title": "Скрин 2", "url": "content/reviews/3.jpg", "type": "image" }
+        {
+          "title": "Скрин 1",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/3.jpg",
+          "type": "image"
+        }
       ],
-
       "status": "published"
     },
-	{
+    {
       "id": "rev-005",
       "date": "2025-01-10",
       "author": "Ирина",
       "authorRole": "ОАО",
       "rating": 5,
-
-      "lawArea": ["Трудовое право"],
+      "lawArea": [
+        "Трудовое право"
+      ],
       "problem": "Спор с работодателем по выплатам",
       "goal": "Взыскать задолженность и компенсацию",
       "result": "Получили выплаты и компенсацию",
-
       "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
-
-      "tags": ["суд", "взыскание"],
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
       "docs": [
-        { "title": "Решение суда", "url": "/docs/rev-001/decision.pdf", "type": "pdf" }
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
       ],
-
       "attachments": [
-        { "title": "Скрин 1", "url": "/img/rev-001/screen-1.jpg", "type": "image" },
-        { "title": "Скрин 2", "url": "/img/rev-001/screen-2.jpg", "type": "image" }
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
       ],
-
       "status": "published"
     },
-	{
+    {
       "id": "rev-006",
       "date": "2025-01-10",
       "author": "Ирина",
       "authorRole": "ОАО",
       "rating": 5,
-
-      "lawArea": ["Трудовое право"],
+      "lawArea": [
+        "Трудовое право"
+      ],
       "problem": "Спор с работодателем по выплатам",
       "goal": "Взыскать задолженность и компенсацию",
       "result": "Получили выплаты и компенсацию",
-
       "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
-
-      "tags": ["суд", "взыскание"],
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
       "docs": [
-        { "title": "Решение суда", "url": "/docs/rev-001/decision.pdf", "type": "pdf" }
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
       ],
-
       "attachments": [
-        { "title": "Скрин 1", "url": "/img/rev-001/screen-1.jpg", "type": "image" },
-        { "title": "Скрин 2", "url": "/img/rev-001/screen-2.jpg", "type": "image" }
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
       ],
-
+      "status": "published"
+    },
+    {
+      "id": "rev-007",
+      "date": "2026-01-24",
+      "author": "dffd",
+      "authorRole": "физ лицо",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "dffd",
+      "goal": "dfdf",
+      "result": "dfdf",
+      "text": "dfdfdf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "dfd",
+          "url": "dfdfdf"
+        }
+      ],
+      "attachments": [],
+      "status": "draft"
+    },
+    {
+      "id": "rev-008",
+      "date": "2026-01-24",
+      "author": "gfgfgf",
+      "authorRole": "gffggf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "gf",
+      "goal": "gf",
+      "result": "ggf",
+      "text": "gf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "gfgf",
+          "url": "gffg",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "gffggf",
+          "url": "fggffg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-009",
+      "date": "2026-01-24",
+      "author": "dfdfdf",
+      "authorRole": "dfdfdf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "dfdfdfg",
+      "goal": "fghgh",
+      "result": "ghhg",
+      "text": "ghghjhhjjh",
+      "tags": [],
+      "docs": [
+        {
+          "title": "ghghgh",
+          "url": "ghgh",
+          "type": "pdf"
+        },
+        {
+          "title": "hgghgh",
+          "url": "ghghgh",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "ghghgh",
+          "url": "jhhjhj",
+          "type": "image"
+        },
+        {
+          "title": "jhjhhj",
+          "url": "jhhjhj",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-010",
+      "date": "2026-01-24",
+      "author": "1232234",
+      "authorRole": "3455454",
+      "rating": 5,
+      "lawArea": [
+        "Гражданское право",
+        "Семейное право"
+      ],
+      "problem": "33434",
+      "goal": "545",
+      "result": "4554",
+      "text": "565665",
+      "tags": [],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-011",
+      "date": "2026-01-24",
+      "author": "trtrtrtr",
+      "authorRole": "rttrtrrt",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "trrtrtrttr",
+      "goal": "rtrtrt",
+      "result": "rttrrttr",
+      "text": "rtrtrtrtrtrtrtrtrt",
+      "tags": [],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "trrtrtrt",
+          "url": "",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-002",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-003",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ИП",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-004",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "Юр. лицо",
+      "rating": 4,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/3.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-005",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-006",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-007",
+      "date": "2026-01-24",
+      "author": "dffd",
+      "authorRole": "физ лицо",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "dffd",
+      "goal": "dfdf",
+      "result": "dfdf",
+      "text": "dfdfdf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "dfd",
+          "url": "dfdfdf"
+        }
+      ],
+      "attachments": [],
+      "status": "draft"
+    },
+    {
+      "id": "rev-008",
+      "date": "2026-01-24",
+      "author": "gfgfgf",
+      "authorRole": "gffggf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "gf",
+      "goal": "gf",
+      "result": "ggf",
+      "text": "gf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "gfgf",
+          "url": "gffg",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "gffggf",
+          "url": "fggffg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-009",
+      "date": "2026-01-24",
+      "author": "dfdfdf",
+      "authorRole": "dfdfdf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "dfdfdfg",
+      "goal": "fghgh",
+      "result": "ghhg",
+      "text": "ghghjhhjjh",
+      "tags": [],
+      "docs": [
+        {
+          "title": "ghghgh",
+          "url": "ghgh",
+          "type": "pdf"
+        },
+        {
+          "title": "hgghgh",
+          "url": "ghghgh",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "ghghgh",
+          "url": "jhhjhj",
+          "type": "image"
+        },
+        {
+          "title": "jhjhhj",
+          "url": "jhhjhj",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-010",
+      "date": "2026-01-24",
+      "author": "1232234",
+      "authorRole": "3455454",
+      "rating": 5,
+      "lawArea": [
+        "Гражданское право",
+        "Семейное право"
+      ],
+      "problem": "33434",
+      "goal": "545",
+      "result": "4554",
+      "text": "565665",
+      "tags": [],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-011",
+      "date": "2026-01-24",
+      "author": "trtrtrtr",
+      "authorRole": "rttrtrrt",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "trrtrtrttr",
+      "goal": "rtrtrt",
+      "result": "rttrrttr",
+      "text": "rtrtrtrtrtrtrtrtrt",
+      "tags": [],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "trrtrtrt",
+          "url": "",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-002",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-003",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ИП",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-004",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "Юр. лицо",
+      "rating": 4,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/3.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-005",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-006",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-007",
+      "date": "2026-01-24",
+      "author": "dffd",
+      "authorRole": "физ лицо",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "dffd",
+      "goal": "dfdf",
+      "result": "dfdf",
+      "text": "dfdfdf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "dfd",
+          "url": "dfdfdf"
+        }
+      ],
+      "attachments": [],
+      "status": "draft"
+    },
+    {
+      "id": "rev-008",
+      "date": "2026-01-24",
+      "author": "gfgfgf",
+      "authorRole": "gffggf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "gf",
+      "goal": "gf",
+      "result": "ggf",
+      "text": "gf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "gfgf",
+          "url": "gffg",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "gffggf",
+          "url": "fggffg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-009",
+      "date": "2026-01-24",
+      "author": "dfdfdf",
+      "authorRole": "dfdfdf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "dfdfdfg",
+      "goal": "fghgh",
+      "result": "ghhg",
+      "text": "ghghjhhjjh",
+      "tags": [],
+      "docs": [
+        {
+          "title": "ghghgh",
+          "url": "ghgh",
+          "type": "pdf"
+        },
+        {
+          "title": "hgghgh",
+          "url": "ghghgh",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "ghghgh",
+          "url": "jhhjhj",
+          "type": "image"
+        },
+        {
+          "title": "jhjhhj",
+          "url": "jhhjhj",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-010",
+      "date": "2026-01-24",
+      "author": "1232234",
+      "authorRole": "3455454",
+      "rating": 5,
+      "lawArea": [
+        "Гражданское право",
+        "Семейное право"
+      ],
+      "problem": "33434",
+      "goal": "545",
+      "result": "4554",
+      "text": "565665",
+      "tags": [],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-011",
+      "date": "2026-01-24",
+      "author": "trtrtrtr",
+      "authorRole": "rttrtrrt",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "trrtrtrttr",
+      "goal": "rtrtrt",
+      "result": "rttrrttr",
+      "text": "rtrtrtrtrtrtrtrtrt",
+      "tags": [],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "trrtrtrt",
+          "url": "",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-002",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-003",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ИП",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-004",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "Юр. лицо",
+      "rating": 4,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/3.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-005",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-006",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-007",
+      "date": "2026-01-24",
+      "author": "dffd",
+      "authorRole": "физ лицо",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "dffd",
+      "goal": "dfdf",
+      "result": "dfdf",
+      "text": "dfdfdf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "dfd",
+          "url": "dfdfdf"
+        }
+      ],
+      "attachments": [],
+      "status": "draft"
+    },
+    {
+      "id": "rev-008",
+      "date": "2026-01-24",
+      "author": "gfgfgf",
+      "authorRole": "gffggf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "gf",
+      "goal": "gf",
+      "result": "ggf",
+      "text": "gf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "gfgf",
+          "url": "gffg",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "gffggf",
+          "url": "fggffg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-009",
+      "date": "2026-01-24",
+      "author": "dfdfdf",
+      "authorRole": "dfdfdf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "dfdfdfg",
+      "goal": "fghgh",
+      "result": "ghhg",
+      "text": "ghghjhhjjh",
+      "tags": [],
+      "docs": [
+        {
+          "title": "ghghgh",
+          "url": "ghgh",
+          "type": "pdf"
+        },
+        {
+          "title": "hgghgh",
+          "url": "ghghgh",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "ghghgh",
+          "url": "jhhjhj",
+          "type": "image"
+        },
+        {
+          "title": "jhjhhj",
+          "url": "jhhjhj",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-010",
+      "date": "2026-01-24",
+      "author": "1232234",
+      "authorRole": "3455454",
+      "rating": 5,
+      "lawArea": [
+        "Гражданское право",
+        "Семейное право"
+      ],
+      "problem": "33434",
+      "goal": "545",
+      "result": "4554",
+      "text": "565665",
+      "tags": [],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-011",
+      "date": "2026-01-24",
+      "author": "trtrtrtr",
+      "authorRole": "rttrtrrt",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "trrtrtrttr",
+      "goal": "rtrtrt",
+      "result": "rttrrttr",
+      "text": "rtrtrtrtrtrtrtrtrt",
+      "tags": [],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "trrtrtrt",
+          "url": "",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-002",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-003",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ИП",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-004",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "Юр. лицо",
+      "rating": 4,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/3.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-005",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-006",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-007",
+      "date": "2026-01-24",
+      "author": "dffd",
+      "authorRole": "физ лицо",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "dffd",
+      "goal": "dfdf",
+      "result": "dfdf",
+      "text": "dfdfdf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "dfd",
+          "url": "dfdfdf"
+        }
+      ],
+      "attachments": [],
+      "status": "draft"
+    },
+    {
+      "id": "rev-008",
+      "date": "2026-01-24",
+      "author": "gfgfgf",
+      "authorRole": "gffggf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "gf",
+      "goal": "gf",
+      "result": "ggf",
+      "text": "gf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "gfgf",
+          "url": "gffg",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "gffggf",
+          "url": "fggffg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-009",
+      "date": "2026-01-24",
+      "author": "dfdfdf",
+      "authorRole": "dfdfdf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "dfdfdfg",
+      "goal": "fghgh",
+      "result": "ghhg",
+      "text": "ghghjhhjjh",
+      "tags": [],
+      "docs": [
+        {
+          "title": "ghghgh",
+          "url": "ghgh",
+          "type": "pdf"
+        },
+        {
+          "title": "hgghgh",
+          "url": "ghghgh",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "ghghgh",
+          "url": "jhhjhj",
+          "type": "image"
+        },
+        {
+          "title": "jhjhhj",
+          "url": "jhhjhj",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-010",
+      "date": "2026-01-24",
+      "author": "1232234",
+      "authorRole": "3455454",
+      "rating": 5,
+      "lawArea": [
+        "Гражданское право",
+        "Семейное право"
+      ],
+      "problem": "33434",
+      "goal": "545",
+      "result": "4554",
+      "text": "565665",
+      "tags": [],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-011",
+      "date": "2026-01-24",
+      "author": "trtrtrtr",
+      "authorRole": "rttrtrrt",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "trrtrtrttr",
+      "goal": "rtrtrt",
+      "result": "rttrrttr",
+      "text": "rtrtrtrtrtrtrtrtrt",
+      "tags": [],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "trrtrtrt",
+          "url": "",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-002",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-003",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ИП",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-004",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "Юр. лицо",
+      "rating": 4,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/3.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-005",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-006",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-007",
+      "date": "2026-01-24",
+      "author": "dffd",
+      "authorRole": "физ лицо",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "dffd",
+      "goal": "dfdf",
+      "result": "dfdf",
+      "text": "dfdfdf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "dfd",
+          "url": "dfdfdf"
+        }
+      ],
+      "attachments": [],
+      "status": "draft"
+    },
+    {
+      "id": "rev-008",
+      "date": "2026-01-24",
+      "author": "gfgfgf",
+      "authorRole": "gffggf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "gf",
+      "goal": "gf",
+      "result": "ggf",
+      "text": "gf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "gfgf",
+          "url": "gffg",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "gffggf",
+          "url": "fggffg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-009",
+      "date": "2026-01-24",
+      "author": "dfdfdf",
+      "authorRole": "dfdfdf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "dfdfdfg",
+      "goal": "fghgh",
+      "result": "ghhg",
+      "text": "ghghjhhjjh",
+      "tags": [],
+      "docs": [
+        {
+          "title": "ghghgh",
+          "url": "ghgh",
+          "type": "pdf"
+        },
+        {
+          "title": "hgghgh",
+          "url": "ghghgh",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "ghghgh",
+          "url": "jhhjhj",
+          "type": "image"
+        },
+        {
+          "title": "jhjhhj",
+          "url": "jhhjhj",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-010",
+      "date": "2026-01-24",
+      "author": "1232234",
+      "authorRole": "3455454",
+      "rating": 5,
+      "lawArea": [
+        "Гражданское право",
+        "Семейное право"
+      ],
+      "problem": "33434",
+      "goal": "545",
+      "result": "4554",
+      "text": "565665",
+      "tags": [],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-011",
+      "date": "2026-01-24",
+      "author": "trtrtrtr",
+      "authorRole": "rttrtrrt",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "trrtrtrttr",
+      "goal": "rtrtrt",
+      "result": "rttrrttr",
+      "text": "rtrtrtrtrtrtrtrtrt",
+      "tags": [],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "trrtrtrt",
+          "url": "",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-002",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-003",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ИП",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-004",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "Юр. лицо",
+      "rating": 4,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "content/reviews/2.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "content/reviews/3.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-005",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-006",
+      "date": "2025-01-10",
+      "author": "Ирина",
+      "authorRole": "ОАО",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "Спор с работодателем по выплатам",
+      "goal": "Взыскать задолженность и компенсацию",
+      "result": "Получили выплаты и компенсацию",
+      "text": "Отличная работа: быстро разобрались в документах, всё объяснили.",
+      "tags": [
+        "суд",
+        "взыскание"
+      ],
+      "docs": [
+        {
+          "title": "Решение суда",
+          "url": "/docs/rev-001/decision.pdf",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "/img/rev-001/screen-1.jpg",
+          "type": "image"
+        },
+        {
+          "title": "Скрин 2",
+          "url": "/img/rev-001/screen-2.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-007",
+      "date": "2026-01-24",
+      "author": "dffd",
+      "authorRole": "физ лицо",
+      "rating": 5,
+      "lawArea": [
+        "Трудовое право"
+      ],
+      "problem": "dffd",
+      "goal": "dfdf",
+      "result": "dfdf",
+      "text": "dfdfdf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "dfd",
+          "url": "dfdfdf"
+        }
+      ],
+      "attachments": [],
+      "status": "draft"
+    },
+    {
+      "id": "rev-008",
+      "date": "2026-01-24",
+      "author": "gfgfgf",
+      "authorRole": "gffggf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "gf",
+      "goal": "gf",
+      "result": "ggf",
+      "text": "gf",
+      "tags": [],
+      "docs": [
+        {
+          "title": "gfgf",
+          "url": "gffg",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "gffggf",
+          "url": "fggffg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-009",
+      "date": "2026-01-24",
+      "author": "dfdfdf",
+      "authorRole": "dfdfdf",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "dfdfdfg",
+      "goal": "fghgh",
+      "result": "ghhg",
+      "text": "ghghjhhjjh",
+      "tags": [],
+      "docs": [
+        {
+          "title": "ghghgh",
+          "url": "ghgh",
+          "type": "pdf"
+        },
+        {
+          "title": "hgghgh",
+          "url": "ghghgh",
+          "type": "pdf"
+        }
+      ],
+      "attachments": [
+        {
+          "title": "ghghgh",
+          "url": "jhhjhj",
+          "type": "image"
+        },
+        {
+          "title": "jhjhhj",
+          "url": "jhhjhj",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+    {
+      "id": "rev-010",
+      "date": "2026-01-24",
+      "author": "1232234",
+      "authorRole": "3455454",
+      "rating": 5,
+      "lawArea": [
+        "Гражданское право",
+        "Семейное право"
+      ],
+      "problem": "33434",
+      "goal": "545",
+      "result": "4554",
+      "text": "565665",
+      "tags": [],
+      "docs": [],
+      "attachments": [],
+      "status": "published"
+    },
+    {
+      "id": "rev-011",
+      "date": "2026-01-24",
+      "author": "trtrtrtr",
+      "authorRole": "rttrtrrt",
+      "rating": 5,
+      "lawArea": [],
+      "problem": "trrtrtrttr",
+      "goal": "rtrtrt",
+      "result": "rttrrttr",
+      "text": "rtrtrtrtrtrtrtrtrt",
+      "tags": [],
+      "docs": [],
+      "attachments": [
+        {
+          "title": "trrtrtrt",
+          "url": "",
+          "type": "image"
+        }
+      ],
       "status": "published"
     }
   ]
