@@ -1,5 +1,8 @@
 let reviewsData = null;
 let currentReviewModalId = null;
+let currentPage = 1;
+const itemsPerPage = 20;
+let filteredReviews = [];
 
 // 1) Загрузка JSON
 async function loadReviewsData() {
@@ -64,7 +67,108 @@ function getPdfDocs(review) {
   return docs.filter(d => String(d?.type || '').toLowerCase() === 'pdf' || String(d?.url || '').toLowerCase().endsWith('.pdf'));
 }
 
-// ... остальной код без изменений ...
+// Функция для перемешивания массива (Fisher-Yates shuffle)
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Функция для получения случайных отзывов
+function getRandomReviews(reviews, count) {
+  if (reviews.length <= count) return [...reviews];
+  return shuffleArray(reviews).slice(0, count);
+}
+
+// Функция для рендера пагинации
+function renderPagination(totalItems, currentPage, itemsPerPage) {
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const paginationContainer = document.getElementById('reviewsPagination');
+  
+  if (!paginationContainer || totalPages <= 1) {
+    if (paginationContainer) paginationContainer.innerHTML = '';
+    return;
+  }
+  
+  let paginationHTML = '<div class="pagination">';
+  
+  // Кнопка "Назад"
+  if (currentPage > 1) {
+    paginationHTML += `<button class="pagination-btn" onclick="goToPage(${currentPage - 1})">Назад</button>`;
+  }
+  
+  // Номера страниц
+  for (let i = 1; i <= totalPages; i++) {
+    if (
+      i === 1 || 
+      i === totalPages || 
+      (i >= currentPage - 2 && i <= currentPage + 2)
+    ) {
+      if (i === currentPage) {
+        paginationHTML += `<span class="pagination-current">${i}</span>`;
+      } else {
+        paginationHTML += `<button class="pagination-btn" onclick="goToPage(${i})">${i}</button>`;
+      }
+    } else if (
+      (i === currentPage - 3 && currentPage > 4) || 
+      (i === currentPage + 3 && currentPage < totalPages - 3)
+    ) {
+      paginationHTML += '<span class="pagination-dots">...</span>';
+    }
+  }
+  
+  // Кнопка "Вперед"
+  if (currentPage < totalPages) {
+    paginationHTML += `<button class="pagination-btn" onclick="goToPage(${currentPage + 1})">Вперёд</button>`;
+  }
+  
+  paginationHTML += '</div>';
+  
+  paginationContainer.innerHTML = paginationHTML;
+}
+
+// Функция для прокрутки к началу страницы
+function scrollToReviewsTop() {
+  // Прокручиваем к началу контейнера с отзывами
+  const reviewsContainer = document.getElementById('reviewsList');
+  if (reviewsContainer) {
+    // Получаем позицию контейнера относительно верха страницы
+    const containerTop = reviewsContainer.getBoundingClientRect().top + window.pageYOffset;
+    
+    // Прокручиваем с плавной анимацией
+    window.scrollTo({
+      top: containerTop - 100, // Немного выше для лучшего обзора
+      behavior: 'smooth'
+    });
+  } else {
+    // Если контейнер не найден, прокручиваем просто к верху страницы
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+}
+
+// Функция перехода на страницу
+function goToPage(pageNumber) {
+  currentPage = pageNumber;
+  const reviewsList = document.getElementById('reviewsList');
+  const modalsContainer = document.getElementById('reviewsModalsContainer');
+  
+  // Очищаем только список отзывов, модалки оставляем
+  if (reviewsList) reviewsList.innerHTML = '';
+  if (modalsContainer) modalsContainer.innerHTML = '';
+  
+  // Рендерим отзывы для текущей страницы
+  createReviewCards(reviewsData);
+  
+  // Прокручиваем к началу страницы после обновления контента
+  // Используем небольшую задержку, чтобы дать время на рендеринг DOM
+  setTimeout(scrollToReviewsTop, 50);
+}
 
 // 2) Рендер карточек + модалок (и для слайдера, и для страницы)
 function createReviewCards(data) {
@@ -94,30 +198,22 @@ function createReviewCards(data) {
     return;
   }
 
-  published.forEach(review => {
-    const id = review.id;
-    const author = escapeHtml(review.author);
-    const authorRole = escapeHtml(review.authorRole || '');
-    const date = formatDate(review.date);
-    const fullText = String(review.text || '');
-    const textForModal = escapeHtml(fullText);
-    const previewHome = escapeHtml(truncateText(fullText, 100));   // главная
-    const previewPage = escapeHtml(truncateText(fullText, 300));   // все отзывы
-    const rating = Number(review.rating) || 0;
+  // Сохраняем все опубликованные отзывы для пагинации
+  filteredReviews = published;
 
-    const lawArea = Array.isArray(review.lawArea) ? review.lawArea : [];
-    const lawAreaText = escapeHtml(lawArea.join(', '));
+  // A) СЛАЙДЕР НА ГЛАВНОЙ - 10 случайных отзывов
+  if (reviewsSlider) {
+    const randomReviews = getRandomReviews(published, 10);
+    
+    randomReviews.forEach(review => {
+      const id = review.id;
+      const author = escapeHtml(review.author);
+      const authorRole = escapeHtml(review.authorRole || '');
+      const date = formatDate(review.date);
+      const fullText = String(review.text || '');
+      const previewHome = escapeHtml(truncateText(fullText, 100));   // главная
+      const rating = Number(review.rating) || 0;
 
-    const problem = escapeHtml(review.problem || '');
-    const goal = escapeHtml(review.goal || '');
-    const result = escapeHtml(review.result || '');
-
-    const firstImg = getFirstImageUrl(review);
-    const images = getImageAttachments(review);
-    const pdfs = getPdfDocs(review);
-
-    // A) Карточка в СЛАЙДЕРЕ (аналог staff-card)
-    if (reviewsSlider) {
       const card = document.createElement('div');
       card.className = 'review-card review-card--slider';
       card.onclick = () => openReviewModal(id);
@@ -133,10 +229,45 @@ function createReviewCards(data) {
       `;
 
       reviewsSlider.appendChild(card);
-    }
+    });
+  }
 
-    // B) Карточка на СТРАНИЦЕ ВСЕХ ОТЗЫВОВ (2 колонки, с картинкой первого вложения)
-    if (reviewsList) {
+  // B) СТРАНИЦА ВСЕХ ОТЗЫВОВ - с пагинацией
+  if (reviewsList) {
+    // Рассчитываем отзывы для текущей страницы
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedReviews = filteredReviews.slice(startIndex, endIndex);
+    
+    // Если нет отзывов на текущей странице (например, удалили последние)
+    if (paginatedReviews.length === 0 && currentPage > 1) {
+      currentPage = Math.max(1, Math.ceil(filteredReviews.length / itemsPerPage));
+      goToPage(currentPage);
+      return;
+    }
+    
+    paginatedReviews.forEach(review => {
+      const id = review.id;
+      const author = escapeHtml(review.author);
+      const authorRole = escapeHtml(review.authorRole || '');
+      const date = formatDate(review.date);
+      const fullText = String(review.text || '');
+      const previewPage = escapeHtml(truncateText(fullText, 300));   // все отзывы
+      const rating = Number(review.rating) || 0;
+
+      const lawArea = Array.isArray(review.lawArea) ? review.lawArea : [];
+      const lawAreaText = escapeHtml(lawArea.join(', '));
+
+      const problem = escapeHtml(review.problem || '');
+      const goal = escapeHtml(review.goal || '');
+      const result = escapeHtml(review.result || '');
+
+      const firstImg = getFirstImageUrl(review);
+      const images = getImageAttachments(review);
+      const pdfs = getPdfDocs(review);
+      
+      const textForModal = escapeHtml(fullText);
+
       const item = document.createElement('div');
       item.className = 'review-grid-card';
       item.onclick = () => openReviewModal(id);
@@ -162,10 +293,33 @@ function createReviewCards(data) {
       `;
 
       reviewsList.appendChild(item);
-    }
+    });
+    
+    // Рендерим пагинацию
+    renderPagination(filteredReviews.length, currentPage, itemsPerPage);
+  }
 
-    // C) Модалка
-    if (modalsContainer) {
+  // C) МОДАЛКИ - рендерим все отзывы для модалок
+  if (modalsContainer) {
+    published.forEach(review => {
+      const id = review.id;
+      const author = escapeHtml(review.author);
+      const authorRole = escapeHtml(review.authorRole || '');
+      const date = formatDate(review.date);
+      const fullText = String(review.text || '');
+      const textForModal = escapeHtml(fullText);
+      const rating = Number(review.rating) || 0;
+
+      const lawArea = Array.isArray(review.lawArea) ? review.lawArea : [];
+      const lawAreaText = escapeHtml(lawArea.join(', '));
+
+      const problem = escapeHtml(review.problem || '');
+      const goal = escapeHtml(review.goal || '');
+      const result = escapeHtml(review.result || '');
+
+      const images = getImageAttachments(review);
+      const pdfs = getPdfDocs(review);
+
       const modal = document.createElement('div');
       modal.id = id;
       modal.className = 'modal review-modal';
@@ -266,11 +420,9 @@ function createReviewCards(data) {
       `;
 
       modalsContainer.appendChild(modal);
-    }
-  });
+    });
+  }
 }
-
-// ... остальной код без изменений ...
 
 // 3) Модалки (по аналогии с staff.js)
 function openReviewModal(reviewId) {
@@ -346,7 +498,6 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (reviewsSlider) reviewsSlider.innerHTML = msg;
   }
 });
-
 
 function truncateText(str, limit) {
   const s = String(str ?? '').trim();
