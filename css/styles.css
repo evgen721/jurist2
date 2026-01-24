@@ -463,41 +463,48 @@ margin-top: 15px;
     line-height: 1.4;
 }
 
-/* Кнопка "Показать еще" */
-.btn-load-more {
-    display: block;
-    background: #7b4e19;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 22px;
-    font-size: 1em;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s;
-    margin: 20px auto;
+.reviews-pagination {
+  margin: 40px 0;
+  text-align: center;
 }
 
-.btn-load-more:hover {
-    background: #6a4316;
+.pagination {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Скрываем все отзывы кроме первых 6 */
-.reviews-grid .review-card-all:nth-child(n+7) {
-    display: none;
+.pagination-btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
-/* Класс для скрытых отзывов */
-.hidden-review {
-    display: none !important;
+.pagination-btn:hover {
+  background: #f5f5f5;
+  border-color: #7b4e19;
 }
 
-/* Когда отзывы показываются - убираем скрытие */
-.review-card-all.visible {
-    display: flex !important;
+.pagination-current {
+  padding: 8px 16px;
+  border: 2px solid #7b4e19;
+  background: #a36d3b;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-
+.pagination-dots {
+  padding: 8px 4px;
+  color: #666;
+}
 
 
 
