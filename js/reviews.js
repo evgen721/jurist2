@@ -210,8 +210,8 @@ function createReviewCards(data) {
       const author = escapeHtml(review.author);
       const authorRole = escapeHtml(review.authorRole || '');
       const date = formatDate(review.date);
-      const fullText = String(review.text || '');
-      const previewHome = escapeHtml(truncateText(fullText, 100));   // главная
+      const problem = String(review.problem || '');  // Используем поле problem для превью
+      const previewHome = escapeHtml(truncateText(problem, 100));   // главная
       const rating = Number(review.rating) || 0;
 
       const card = document.createElement('div');
@@ -251,34 +251,26 @@ function createReviewCards(data) {
       const author = escapeHtml(review.author);
       const authorRole = escapeHtml(review.authorRole || '');
       const date = formatDate(review.date);
-      const fullText = String(review.text || '');
-      const previewPage = escapeHtml(truncateText(fullText, 300));   // все отзывы
+      const problem = String(review.problem || '');  // Используем поле problem для превью
+      const previewPage = escapeHtml(truncateText(problem, 300));   // все отзывы
       const rating = Number(review.rating) || 0;
 
       const lawArea = Array.isArray(review.lawArea) ? review.lawArea : [];
       const lawAreaText = escapeHtml(lawArea.join(', '));
 
-      const problem = escapeHtml(review.problem || '');
-      const goal = escapeHtml(review.goal || '');
+      const problemFull = escapeHtml(review.problem || '');
       const result = escapeHtml(review.result || '');
 
       const firstImg = getFirstImageUrl(review);
       const images = getImageAttachments(review);
       const pdfs = getPdfDocs(review);
       
-      const textForModal = escapeHtml(fullText);
-
       const item = document.createElement('div');
       item.className = 'review-grid-card';
       item.onclick = () => openReviewModal(id);
 
       item.innerHTML = `
-        ${firstImg
-          ? `<img src="${firstImg}" alt="Вложение отзыва ${author}" class="review-grid-img">`
-          : `<div class="review-grid-img review-grid-img--placeholder" aria-label="Нет скриншота">
-               <span>Нет скриншота</span>
-             </div>`
-        }
+        
         <div class="review-grid-info">
           <div class="review-grid-meta">
             <div class="review-rating">${renderStars(rating)}</div>
@@ -290,6 +282,13 @@ function createReviewCards(data) {
 
           <div class="review-grid-text">${previewPage}</div>
         </div>
+		
+		${firstImg
+          ? `<img src="${firstImg}" alt="Вложение отзыва ${author}" class="review-grid-img">`
+          : `<div class="review-grid-img review-grid-img--placeholder" aria-label="Нет скриншота">
+               <span>Нет скриншота</span>
+             </div>`
+        }
       `;
 
       reviewsList.appendChild(item);
@@ -306,7 +305,7 @@ function createReviewCards(data) {
       const author = escapeHtml(review.author);
       const authorRole = escapeHtml(review.authorRole || '');
       const date = formatDate(review.date);
-      const fullText = String(review.text || '');
+      const fullText = String(review.text || '');  // В модалке используем поле text
       const textForModal = escapeHtml(fullText);
       const rating = Number(review.rating) || 0;
 
@@ -314,7 +313,6 @@ function createReviewCards(data) {
       const lawAreaText = escapeHtml(lawArea.join(', '));
 
       const problem = escapeHtml(review.problem || '');
-      const goal = escapeHtml(review.goal || '');
       const result = escapeHtml(review.result || '');
 
       const images = getImageAttachments(review);
@@ -347,7 +345,7 @@ function createReviewCards(data) {
               </div>
             </div>
 
-            <!-- Блок с информацией (остается без изменений) -->
+            <!-- Блок с информацией -->
             <div class="review-info">
               ${lawAreaText ? `
                 <div class="info-row">
@@ -358,15 +356,8 @@ function createReviewCards(data) {
 
               ${problem ? `
                 <div class="info-row">
-                  <span class="info-label">Проблема:</span>
+                  <span class="info-label">Ситуация:</span>
                   <span class="info-value">${problem}</span>
-                </div>
-              ` : ''}
-
-              ${goal ? `
-                <div class="info-row">
-                  <span class="info-label">Цель:</span>
-                  <span class="info-value">${goal}</span>
                 </div>
               ` : ''}
 
@@ -392,7 +383,7 @@ function createReviewCards(data) {
 
             ${(images.length > 0) ? `
               <div class="review-attachments">
-                <h3 class="section-title">Скриншоты / вложения</h3>
+                <h3 class="section-title">Скриншоты</h3>
                 <div class="review-attachments-grid">
                   ${images.map(img => `
                     <a href="${img.url}" target="_blank" class="review-attachment">
