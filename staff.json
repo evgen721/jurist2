@@ -4,49 +4,24 @@
       "id": "employee1",
       "name": "Булатова Елизавета",
       "position": "Генеральный директор. Практикующий юрист",
-      "photo": "content/staff/BDW2.png",
+      "photo": "content/staff/ST-2-a6hkj8j5ir.png",
       "education": "Российский государственный профессионально-педагогический университет, бакалавр",
       "experience": "5 лет",
       "description": "описание",
-      "documents": [
-        {
-          "name": "Диплом о высшем образовании",
-          "image": "https://www.ofsetpodolsk.ru/media/2024/08/Diplom_spech-s-otl.jpg"
-        },
-        {
-          "name": "AWS Certified",
-          "image": "https://www.ofsetpodolsk.ru/media/2024/08/Diplom_spech-s-otl.jpg"
-        },
-        {
-          "name": "React Professional",
-          "image": "https://images.unsplash.com/photo-1551135049-8a33b42738b4?w=200&h=300&fit=crop"
-        },
-        {
-          "name": "Благодарность",
-          "image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=200&h=300&fit=crop"
-        }
-      ]
+      "documents": []
     },
     {
       "id": "employee2",
       "name": "Булатов Дмитрий",
       "position": "Партнёр, юрист.",
-      "photo": "content/staff/BDW.png",
+      "photo": "content/staff/ST-1-tk3tw2vsga.png",
       "education": "Уральский государственный юридический университет имени В.Ф. Яковлева, магистратура",
       "experience": "10 лет",
       "description": "описание",
       "documents": [
         {
-          "name": "Диплом МГУ",
-          "image": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=200&h=300&fit=crop"
-        },
-        {
-          "name": "PMP Certified",
-          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=300&fit=crop"
-        },
-        {
-          "name": "Благодарность",
-          "image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=200&h=300&fit=crop"
+          "name": "Диплом магистра",
+          "image": "content/staff/ST-1-arnh2azf3c.jpg"
         }
       ]
     },
@@ -54,24 +29,17 @@
       "id": "employee3",
       "name": "Третьяков Кирилл",
       "position": "Партнёр, юрист.",
-      "photo": "content/staff/BDW3.png",
+      "photo": "content/staff/ST-3-f8had56kha.png",
       "education": "Уральский государственный юридический университет имени В.Ф. Яковлева, магистратура",
       "experience": "6 лет",
       "description": "описание",
       "documents": [
-        {
-          "name": "Диплом БВШД",
-          "image": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=200&h=300&fit=crop"
-        },
-        {
-          "name": "Adobe Certified",
-          "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=300&fit=crop"
-        },
-        {
-          "name": "UI Design Award",
-          "image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=200&h=300&fit=crop"
+		{
+          "name": "Диплом магистра",
+          "image": "content/staff/ST-3-synzx2r46o.jpg"
         }
-      ]
+	  ]
     }
   ]
 }
+
