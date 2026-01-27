@@ -49,12 +49,12 @@ function createEmployeeCards(data) {
                 <div class="staff-item-info">
                     <h3 class="staff-item-name">${employee.name}</h3>
                     <p class="staff-item-position">${employee.position}</p>
-					
-					<div class="info-row">
+                    
+                    <div class="info-row">
                         <span class="info-label">Образование:</span>
                         <span class="info-value">${employee.education}</span>
                     </div>
-					<div class="info-row">
+                    <div class="info-row">
                         <span class="info-label">Опыт работы:</span>
                         <span class="info-value">${employee.experience}</span>
                     </div>
@@ -84,6 +84,9 @@ function createEmployeeCards(data) {
         modal.id = employee.id;
         modal.className = 'modal';
         
+        // Проверяем, есть ли документы у сотрудника
+        const hasDocuments = employee.documents && employee.documents.length > 0;
+        
         modal.innerHTML = `
             <div class="modal-content">
                 <button class="close-btn" onclick="closeCurrentModal()">&times;</button>
@@ -106,25 +109,9 @@ function createEmployeeCards(data) {
                         </div>
                     </div>
 
-                    
 
-
-                    
-                </div>
-				<button class="mobile-close-btn" onclick="closeCurrentModal()">Закрыть</button>
-            </div>
-        `;
-
-        if (modalsContainer) {
-            modalsContainer.appendChild(modal);
-        }
-    });
-}
-/* <div class="description-section">
-                        <h3 class="section-title">О сотруднике</h3>
-                        <p class="description-text">${employee.description}</p>
-                    </div>
-                     <div class="documents-section">
+                    ${hasDocuments ? `
+                    <div class="documents-section">
                         <h3 class="section-title">Документы и сертификаты</h3>
                         <div class="documents-grid">
                             ${employee.documents.map(doc => `
@@ -136,9 +123,25 @@ function createEmployeeCards(data) {
                                 </div>
                             `).join('')}
                         </div>
-                    </div> */
+                    </div>
+                    ` : ''}
+                </div>
+                <button class="mobile-close-btn" onclick="closeCurrentModal()">Закрыть</button>
+            </div>
+        `;
+
+        if (modalsContainer) {
+            modalsContainer.appendChild(modal);
+        }
+    });
+}
 
 
+                    /* <div class="description-section">
+                        <h3 class="section-title">О сотруднике</h3>
+                        <p class="description-text">${employee.description}</p>
+                    </div>*/
+					
 // Функции для работы с модальными окнами
 function openModal(employeeId) {
     const modal = document.getElementById(employeeId);
