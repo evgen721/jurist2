@@ -402,7 +402,6 @@ function createReviewCards(data) {
 				  ${images.length > 0 ? `
 					<div class="review-main-image">
 					  <img src="${images[0].url}" alt="${escapeHtml(images[0].title || 'Основной скриншот отзыва')}">
-					  <div class="review-main-image-caption">Скриншот отзыва</div>
 					</div>
 				  ` : ''}
 				  
