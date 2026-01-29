@@ -1666,289 +1666,527 @@ margin: 0;
 /* Новая структура модалки отзыва */
 
 .review-modal .modal-content.review-modal-content {
-  max-width: 900px;
+  max-width: 1100px;
+  padding: 0;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  background: #fff;
 }
 
-.review-detail {
-  padding: 25px 20px;
+/* Хедер модалки */
+.review-modal-header {
+  padding: 30px 30px 20px;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-/* Новый заголовок */
-.review-header-new {
-  margin-bottom: 30px;
-  padding-bottom: 25px;
-  border-bottom: 2px solid #f0f0f0;
-}
-
-.review-title-new {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #2c3e50;
-  margin: 0 0 15px 0;
+.review-author-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
   line-height: 1.2;
+  color: #2c3e50;
 }
 
-/* Мета-строка с рейтингом, ролью и датой */
+.review-role-text {
+  font-size: 1.1rem;
+  color: #805118;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+/* Мета-информация */
 .review-meta-row {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
-.review-rating-modal {
+.review-rating-simple {
   display: flex;
   align-items: center;
-  background: #f8f1e6;
-  padding: 2px 16px;
-  border-radius: 6px;
-  border: 1px solid #a36d3b;
+  gap: 10px;
 }
 
-.review-rating-modal .review-stars {
-  font-size: 0.9em;
+.review-stars {
+  font-size: 1.3rem;
   color: #a36d3b;
+  letter-spacing: 2px;
 }
 
-.review-role {
-  font-size: 0.9rem;
-  color: #805118;
-  font-weight: 500;
-  padding: 2px 16px;
-  background: #f8f1e6;
-  border-radius: 6px;
-  border: 1px solid #a36d3b;
-}
-
-.review-date-modal {
-  font-size: 1.5rem;
+.review-date-simple {
+  font-size: 1rem;
   color: #666;
   font-weight: 400;
-  margin-left: auto;
-  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* Блок с информацией (оставляем как было) */
-.review-info {
+.review-date-icon {
+  opacity: 0.7;
+}
+
+/* Основной контент модалки - НОВАЯ СТРУКТУРА */
+.review-modal-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Двухколоночный макет для десктопа */
+.review-content-wrapper {
   display: grid;
-  gap: 12px;
-  margin: 20px 0 30px;
-  padding: 20px;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Левая колонка - текстовые блоки */
+.review-text-column {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Правая колонка - скриншот */
+.review-image-column {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+/* Карточки с информацией */
+.review-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-info-card {
   background: #f8f9fa;
   border-radius: 12px;
+  padding: 20px;
   border-left: 4px solid #805118;
 }
 
-.info-row {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-
-.info-label {
-  font-weight: 700;
-  color: #805118;
-  min-width: 80px;
-}
-
-.info-value {
-  color: #333;
-  line-height: 1.5;
-  flex: 1;
-}
-
-/* Новый красивый блок с текстом отзыва */
-.review-text-block-new {
-  margin: 30px 0 35px;
-  background: linear-gradient(145deg, #ffffff 0%, #f9f5ef 100%);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(128, 81, 24, 0.08);
-  border: 1px solid #e8d9c5;
-}
-
-.review-text-header {
+.info-card-title {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 30px;
-  background: linear-gradient(90deg, #805118 0%, #a67c52 100%);
-  color: white;
+  gap: 10px;
+  margin: 0 0 15px 0;
+  color: #805118;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
-.quote-icon {
-  flex-shrink: 0;
+.info-card-icon {
+  font-size: 1.3rem;
 }
 
-.quote-icon path {
-  stroke: white;
+.info-card-content {
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Блок с текстом отзыва */
+.review-text-section {
+  background: linear-gradient(145deg, #fefcf8 0%, #f9f5ef 100%);
+  border-radius: 16px;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-text-section::before {
+  content: '"';
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  font-size: 120px;
+  color: rgba(128, 81, 24, 0.08);
+  font-family: Georgia, serif;
+  line-height: 1;
 }
 
 .review-text-title {
-  margin: 0;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 15px 0;
+  color: #805118;
+  font-size: 1.3rem;
   font-weight: 600;
-  color: white;
+}
+
+.review-text-title-icon {
+  font-size: 1.5rem;
 }
 
 .review-text-content {
-  padding: 30px;
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  position: relative;
+  z-index: 1;
 }
 
 .review-text-content p {
-  margin: 0;
-  line-height: 1.8;
-  color: #444;
-  font-size: 1.1rem;
-  text-align: justify;
+  margin: 0 0 1.2em 0;
 }
 
-.review-text-content p:not(:last-child) {
-  margin-bottom: 1.5em;
+.review-text-content p:last-child {
+  margin-bottom: 0;
 }
 
-/* Скриншоты и документы */
-.review-attachments {
-  margin: 35px 0 30px;
+/* Основной скриншот (правая колонка) */
+.review-main-image {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eaeaea;
 }
 
-.section-title {
-  font-size: 1.4rem;
+.review-main-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none; /* Делаем некликабельным */
+}
+
+.review-main-image-caption {
+  padding: 15px;
+  background: #f8f9fa;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Документы в правой колонке */
+.review-docs-sidebar {
+  margin-top: 25px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.docs-sidebar-title {
+  font-size: 1.2rem;
   color: #2c3e50;
   margin: 0 0 15px 0;
   font-weight: 600;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #f0f0f0;
 }
 
-.review-attachments-grid {
-  display: grid;
-  gap: 15px;
-  margin-top: 15px;
+.docs-list-sidebar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Мобильная версия: элементы на 100% ширины друг под другом */
-.review-attachment {
-  display: block;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.doc-item-sidebar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 10px;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
-  width: 100%;
+  border: 1px solid #eaeaea;
 }
 
-.review-attachment:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+.doc-item-sidebar:hover {
+  transform: translateX(5px);
   border-color: #805118;
 }
 
-.review-attachment-img {
+.doc-icon-sidebar {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.doc-info-sidebar {
+  flex: 1;
+}
+
+.doc-title-sidebar {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.doc-download-sidebar {
+  background: #805118;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.doc-download-sidebar:hover {
+  background: #6b4414;
+}
+
+/* Блок дополнительных скриншотов (когда больше 1) */
+.review-additional-images {
+  margin-top: 40px;
+}
+
+.additional-images-title {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.additional-images-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.additional-image-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eaeaea;
+  transition: all 0.3s ease;
+}
+
+.additional-image-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.additional-image-item img {
   width: 100%;
-  
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
-.review-docs {
-  margin: 25px 0 20px;
+/* Футер модалки */
+.review-modal-footer {
+  padding: 20px 30px;
+  background: #f8f9fa;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.review-docs-list {
-  margin: 15px 0 0;
-  padding-left: 20px;
-  list-style: none;
+.action-btn-close {
+  padding: 12px 30px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #805118;
+  color: white;
+  font-size: 1rem;
 }
 
-.review-docs-list li {
-  margin-bottom: 10px;
-  padding-left: 10px;
-  position: relative;
+.action-btn-close:hover {
+  background: #6b4414;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(128, 81, 24, 0.2);
 }
 
-.review-docs-list li:before {
-  content: "📄";
+/* Кнопка закрытия в правом верхнем углу */
+.modal-close-top {
   position: absolute;
-  left: -20px;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: #333;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.review-docs-list a {
-  color: #7b4e19;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
-.review-docs-list a:hover {
-  color: #5a3a12;
-  text-decoration: underline;
-  background: #f5efe6;
-}
-
-.mobile-close-btn {
-  display: none;
-}
-
-
-@media (min-width: 769px) {
-  .review-attachments-grid {
-    grid-template-columns: repeat(2, 1fr); /* Два элемента в ряд */
-  }
+.modal-close-top:hover {
+  background: white;
+  transform: rotate(90deg);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* ----------------------- */
 /* АДАПТИВ ДЛЯ МОБИЛЬНЫХ */
-@media (max-width: 768px) {
-    .review-text-header {
-    padding: 18px 20px;
+@media (max-width: 992px) {
+  .review-modal .modal-content.review-modal-content {
+    border-radius: 12px;
+    max-height: 90vh;
+    overflow-y: auto;
   }
   
-  .review-text-content {
+  .review-modal-header {
+    padding: 20px 20px 15px;
+    position: relative;
+    padding-top: 60px;
+  }
+  
+  .modal-close-top {
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+  }
+  
+  .review-author-name {
+    font-size: 1.5rem;
+  }
+  
+  .review-role-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .review-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .review-date-simple {
+    align-self: flex-end;
+  }
+  
+  /* На мобильной версии - последовательное расположение */
+  .review-modal-body {
+    padding: 0 20px 20px;
+    display: block;
+  }
+  
+  .review-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .review-text-column {
+    order: 1;
+  }
+  
+  .review-image-column {
+    order: 2;
+    position: static;
+  }
+  
+  .review-docs-sidebar {
+    order: 3;
+    margin-top: 25px;
+  }
+  
+  /* Дополнительные скриншоты на мобильной */
+  .review-additional-images {
+    order: 4;
+    margin-top: 30px;
+  }
+  
+  .additional-images-grid {
+    grid-template-columns: 1fr; /* Одна колонка на мобильной */
+    gap: 15px;
+  }
+  
+  .additional-image-item {
+    aspect-ratio: 16/9;
+  }
+  
+  .additional-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Документы в последовательном порядке */
+  .review-docs-full {
+    order: 5;
+    margin-top: 30px;
+    background: #f8f9fa;
+    border-radius: 12px;
     padding: 20px;
   }
   
-  .review-text-content p {
+  .docs-full-title {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+  }
+  
+  .docs-list-full {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .doc-item-full {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .doc-icon-full {
+    font-size: 1.8rem;
+  }
+  
+  .doc-info-full {
+    flex: 1;
+  }
+  
+  .doc-title-full {
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px 0;
     font-size: 1rem;
-    line-height: 1.6;
-    text-align: left;
   }
   
-  .review-attachments-grid {
-    grid-template-columns: 1fr; /* Один элемент в ряд */
-  }
-  
-  .info-row {
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .info-label {
-    min-width: auto;
-  }
-  
-  .mobile-close-btn {
-    display: block;
-    width: 100%;
-    margin-top: 25px;
-    padding: 14px;
+  .doc-download-full {
     background: #805118;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
     font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    display: inline-block;
   }
   
-  .mobile-close-btn:hover {
-    background: #6b4414;
+  .review-modal-footer {
+    padding: 15px 20px;
+    order: 6;
   }
   
-  .close-btn {
-    display: none;
+  .action-btn-close {
+    width: 100%;
+    padding: 14px;
   }
 }
