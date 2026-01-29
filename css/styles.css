@@ -1844,7 +1844,7 @@ margin: 0;
 
 /* Основной скриншот (правая колонка) */
 .review-main-image {
-  width: 100%;
+  width: 70%;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
