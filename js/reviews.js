@@ -323,151 +323,205 @@ function createReviewCards(data) {
       modal.className = 'modal review-modal';
 
       // В функции createReviewCards, внутри modal.innerHTML:
-		modal.innerHTML = `
-		  <div class="modal-content review-modal-content">
-			<button class="modal-close-top" onclick="closeCurrentReviewModal()">&times;</button>
-			
-			<div class="review-modal-header">
-			  <h1 class="review-author-name">${author}</h1>
-			  ${authorRole ? `<div class="review-role-text">${authorRole}</div>` : ''}
-			  
-			  <div class="review-meta-row">
-				<div class="review-rating-simple">
-				  ${renderStars(rating)}
-				</div>
-				
-				<div class="review-date-simple">
-				  <svg class="review-date-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-					<path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM16 2v4M8 2v4M3 10h18"/>
-				  </svg>
-				  ${escapeHtml(date)}
-				</div>
-			  </div>
-			</div>
-			
-			<div class="review-modal-body">
-			  <div class="review-content-wrapper">
-				<!-- Левая колонка - текстовые блоки -->
-				<div class="review-text-column">
-				  ${(problem || result || lawAreaText) ? `
-					<div class="review-info-cards">
-					  					  ${lawAreaText ? `
-						<div class="review-info-card">
-						  <h3 class="info-card-title">
-							<span class="info-card-icon">⚖️</span>
-							Сфера права
-						  </h3>
-						  <p class="info-card-content">${lawAreaText}</p>
-						</div>
-					  ` : ''}
-					  
-					  ${problem ? `
-						<div class="review-info-card">
-						  <h3 class="info-card-title">
-							<span class="info-card-icon">📋</span>
-							Ситуация
-						  </h3>
-						  <p class="info-card-content">${problem}</p>
-						</div>
-					  ` : ''}
-					  
-					  ${result ? `
-						<div class="review-info-card">
-						  <h3 class="info-card-title">
-							<span class="info-card-icon">🏆</span>
-							Результат
-						  </h3>
-						  <p class="info-card-content">${result}</p>
-						</div>
-					  ` : ''}
-					  
-					</div>
-				  ` : ''}
-				  
-				  ${fullText.trim() ? `
-					<div class="review-text-section">
-					  <h2 class="review-text-title">
-						<span class="review-text-title-icon">💬</span>
-						Текст отзыва
-					  </h2>
-					  <div class="review-text-content">
-						<p>${textForModal}</p>
-					  </div>
-					</div>
-				  ` : ''}
-				</div>
-				
-				<!-- Правая колонка - скриншот и документы -->
-				<div class="review-image-column">
-				  ${images.length > 0 ? `
-					<div class="review-main-image">
-					  <img src="${images[0].url}" alt="${escapeHtml(images[0].title || 'Основной скриншот отзыва')}">
-					</div>
-				  ` : ''}
-				  
-				  ${pdfs.length > 0 ? `
-					<div class="review-docs-sidebar">
-					  <h3 class="docs-sidebar-title">Документы</h3>
-					  <ul class="docs-list-sidebar">
-						${pdfs.map(d => `
-						  <li class="doc-item-sidebar">
-							<div class="doc-icon-sidebar">📄</div>
-							<div class="doc-info-sidebar">
-							  <h4 class="doc-title-sidebar">${escapeHtml(d.title || 'Документ')}</h4>
-							</div>
-							<a href="${d.url}" target="_blank" class="doc-download-sidebar">
-							  Открыть
-							</a>
-						  </li>
-						`).join('')}
-					  </ul>
-					</div>
-				  ` : ''}
-				</div>
-			  </div>
-			  
-			  <!-- Дополнительные скриншоты (если больше 1) -->
-			  ${images.length > 1 ? `
-				<div class="review-additional-images">
-				  <h3 class="additional-images-title">Дополнительные скриншоты</h3>
-				  <div class="additional-images-grid">
-					${images.slice(1).map(img => `
-					  <a href="${img.url}" target="_blank" class="additional-image-item">
-						<img src="${img.url}" alt="${escapeHtml(img.title || 'Скриншот отзыва')}">
-					  </a>
-					`).join('')}
-				  </div>
-				</div>
-			  ` : ''}
-			  
-			  <!-- Документы на мобильной версии (скрыты на десктопе) -->
-			  ${pdfs.length > 0 ? `
-				<div class="review-docs-full">
-				  <h3 class="docs-full-title">Документы</h3>
-				  <ul class="docs-list-full">
-					${pdfs.map(d => `
-					  <li class="doc-item-full">
-						<div class="doc-icon-full">📄</div>
-						<div class="doc-info-full">
-						  <h4 class="doc-title-full">${escapeHtml(d.title || 'Документ')}</h4>
-						</div>
-						<a href="${d.url}" target="_blank" class="doc-download-full">
-						  Открыть
-						</a>
-					  </li>
-					`).join('')}
-				  </ul>
-				</div>
-			  ` : ''}
-			</div>
-			
-			<div class="review-modal-footer">
-			  <button class="action-btn-close" onclick="closeCurrentReviewModal()">
-				Закрыть
-			  </button>
-			</div>
-		  </div>
-		`;
+// В функции createReviewCards, внутри modal.innerHTML:
+modal.innerHTML = `
+  <div class="modal-content review-modal-content">
+    <div class="review-modal-header">
+      <div class="review-header-top">
+        <h1 class="review-author-name">${author}</h1>
+        <div class="review-stars-header">
+          ${renderStars(rating)}
+        </div>
+      </div>
+      
+      <div class="review-header-bottom">
+        ${authorRole ? `<div class="review-role-text">${authorRole}</div>` : ''}
+        
+        <div class="review-date-simple">
+          <svg class="review-date-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM16 2v4M8 2v4M3 10h18"/>
+          </svg>
+          ${escapeHtml(date)}
+        </div>
+      </div>
+    </div>
+    
+    <div class="review-modal-body">
+      ${images.length === 1 ? `
+        <!-- Один скриншот: двухколоночный макет -->
+        <div class="review-content-wrapper">
+          <!-- Левая колонка - текстовые блоки -->
+          <div class="review-text-column">
+            ${(problem || result || lawAreaText) ? `
+              <div class="review-info-cards">
+                ${problem ? `
+                  <div class="review-info-card">
+                    <h3 class="info-card-title">
+                      <span class="info-card-icon">📋</span>
+                      Ситуация
+                    </h3>
+                    <p class="info-card-content">${problem}</p>
+                  </div>
+                ` : ''}
+                
+                ${result ? `
+                  <div class="review-info-card">
+                    <h3 class="info-card-title">
+                      <span class="info-card-icon">🏆</span>
+                      Результат
+                    </h3>
+                    <p class="info-card-content">${result}</p>
+                  </div>
+                ` : ''}
+                
+                ${lawAreaText ? `
+                  <div class="review-info-card">
+                    <h3 class="info-card-title">
+                      <span class="info-card-icon">⚖️</span>
+                      Сфера права
+                    </h3>
+                    <p class="info-card-content">${lawAreaText}</p>
+                  </div>
+                ` : ''}
+              </div>
+            ` : ''}
+            
+            ${fullText.trim() ? `
+              <div class="review-text-section">
+                <h2 class="review-text-title">
+                  <span class="review-text-title-icon">💬</span>
+                  Текст отзыва
+                </h2>
+                <div class="review-text-content">
+                  <p>${textForModal}</p>
+                </div>
+              </div>
+            ` : ''}
+          </div>
+          
+          <!-- Правая колонка - один скриншот и документы -->
+          <div class="review-image-column">
+            <div class="review-main-image">
+              <img src="${images[0].url}" alt="${escapeHtml(images[0].title || 'Скриншот отзыва')}">
+            </div>
+          </div>
+        </div>
+		            ${pdfs.length > 0 ? `
+              <div class="review-docs-sidebar">
+                <h3 class="docs-sidebar-title">Документы</h3>
+                <ul class="docs-list-sidebar">
+                  ${pdfs.map(d => `
+                    <li class="doc-item-sidebar">
+                      <div class="doc-icon-sidebar">📄</div>
+                      <div class="doc-info-sidebar">
+                        <h4 class="doc-title-sidebar">${escapeHtml(d.title || 'Документ')}</h4>
+                      </div>
+                      <a href="${d.url}" target="_blank" class="doc-download-sidebar">
+                        Открыть
+                      </a>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+            ` : ''}
+		
+		
+      ` : `
+        <!-- Два и более скриншотов: полноширинный макет -->
+        <div class="review-content-wrapper-full">
+          <!-- Текстовые блоки во всю ширину -->
+          <div class="review-text-column">
+            ${(problem || result || lawAreaText) ? `
+              <div class="review-info-cards">
+                ${problem ? `
+                  <div class="review-info-card">
+                    <h3 class="info-card-title">
+                      <span class="info-card-icon">📋</span>
+                      Ситуация
+                    </h3>
+                    <p class="info-card-content">${problem}</p>
+                  </div>
+                ` : ''}
+                
+                ${result ? `
+                  <div class="review-info-card">
+                    <h3 class="info-card-title">
+                      <span class="info-card-icon">🏆</span>
+                      Результат
+                    </h3>
+                    <p class="info-card-content">${result}</p>
+                  </div>
+                ` : ''}
+                
+                ${lawAreaText ? `
+                  <div class="review-info-card">
+                    <h3 class="info-card-title">
+                      <span class="info-card-icon">⚖️</span>
+                      Сфера права
+                    </h3>
+                    <p class="info-card-content">${lawAreaText}</p>
+                  </div>
+                ` : ''}
+              </div>
+            ` : ''}
+            
+            ${fullText.trim() ? `
+              <div class="review-text-section">
+                <h2 class="review-text-title">
+                  <span class="review-text-title-icon">💬</span>
+                  Текст отзыва
+                </h2>
+                <div class="review-text-content">
+                  <p>${textForModal}</p>
+                </div>
+              </div>
+            ` : ''}
+          </div>
+          
+          ${images.length > 0 ? `
+            <!-- Скриншоты внизу в две колонки -->
+            <div class="review-multiple-images-section">
+              
+              <div class="images-grid-two-columns">
+                ${images.map(img => `
+                  <div class="image-grid-item">
+                    <img src="${img.url}" alt="${escapeHtml(img.title || 'Скриншот отзыва')}">
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+          
+          ${pdfs.length > 0 ? `
+            <!-- Документы внизу -->
+            <div class="review-docs-section-full">
+              <h3 class="docs-section-title-full">Документы</h3>
+              <ul class="docs-list-full">
+                ${pdfs.map(d => `
+                  <li class="doc-item-full">
+                    <div class="doc-icon-full">📄</div>
+                    <div class="doc-info-full">
+                      <h4 class="doc-title-full">${escapeHtml(d.title || 'Документ')}</h4>
+                    </div>
+                    <a href="${d.url}" target="_blank" class="doc-download-full">
+                      Открыть
+                    </a>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+          ` : ''}
+        </div>
+      `}
+    </div>
+    
+    <div class="review-modal-footer">
+      <button class="action-btn-close" onclick="closeCurrentReviewModal()">
+        Закрыть
+      </button>
+    </div>
+  </div>
+`;
 
       modalsContainer.appendChild(modal);
     });
