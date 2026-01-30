@@ -1669,51 +1669,52 @@ margin: 0;
   max-width: 1100px;
   padding: 0;
   border-radius: 16px;
+  
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
   background: #fff;
 }
 
 /* Хедер модалки */
 .review-modal-header {
-  padding: 30px 30px 20px;
+  padding: 15px 30px 15px;
   background: #fff;
   border-bottom: 1px solid #f0f0f0;
+}
+
+.review-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .review-author-name {
   font-size: 1.8rem;
   font-weight: 700;
-  margin: 0 0 10px 0;
+  margin: 0;
   line-height: 1.2;
   color: #2c3e50;
+}
+
+.review-stars-header {
+  font-size: 1.5rem;
+  color: #ffb300;
+  letter-spacing: 3px;
+}
+
+.review-header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .review-role-text {
   font-size: 1.1rem;
   color: #805118;
   font-weight: 500;
-  margin: 0 0 20px 0;
-}
-
-/* Мета-информация */
-.review-meta-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.review-rating-simple {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.review-stars {
-  font-size: 1.3rem;
-  color: #a36d3b;
-  letter-spacing: 2px;
+  margin: 0;
 }
 
 .review-date-simple {
@@ -1729,18 +1730,22 @@ margin: 0;
   opacity: 0.7;
 }
 
-/* Основной контент модалки - НОВАЯ СТРУКТУРА */
+/* Основной контент модалки */
 .review-modal-body {
   padding: 30px;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Двухколоночный макет для десктопа */
+/* Двухколоночный макет для 1 скриншота */
 .review-content-wrapper {
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: 1fr 300px;
   gap: 40px;
+}
+
+/* Полноширинный макет для 2+ скриншотов */
+.review-content-wrapper-full {
+  display: block;
+  margin-bottom: 40px;
 }
 
 /* Левая колонка - текстовые блоки */
@@ -1748,13 +1753,6 @@ margin: 0;
   display: flex;
   flex-direction: column;
   gap: 25px;
-}
-
-/* Правая колонка - скриншот */
-.review-image-column {
-  position: sticky;
-  top: 20px;
-  height: fit-content;
 }
 
 /* Карточки с информацией */
@@ -1794,10 +1792,9 @@ margin: 0;
 
 /* Блок с текстом отзыва */
 .review-text-section {
-  background: linear-gradient(145deg, #fefcf8 0%, #f9f5ef 100%);
+  background: #f8f9fa;
   border-radius: 16px;
   padding: 25px;
-  position: relative;
   overflow: hidden;
 }
 
@@ -1842,9 +1839,15 @@ margin: 0;
   margin-bottom: 0;
 }
 
-/* Основной скриншот (правая колонка) */
+/* Один скриншот в правой колонке */
+.review-image-column {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
 .review-main-image {
-  width: 70%;
+  width: 90%;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -1855,7 +1858,16 @@ margin: 0;
   width: 100%;
   height: auto;
   display: block;
-  pointer-events: none; /* Делаем некликабельным */
+  pointer-events: none;
+}
+
+.review-main-image-caption {
+  padding: 15px;
+  background: #f8f9fa;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
 }
 
 /* Документы в правой колонке */
@@ -1930,12 +1942,12 @@ margin: 0;
   background: #6b4414;
 }
 
-/* Блок дополнительных скриншотов (когда больше 1) */
-.review-additional-images {
-  margin-top: 40px;
+/* Блок нескольких скриншотов внизу (когда 2 и более) */
+.review-multiple-images-section {
+  margin: 40px 0;
 }
 
-.additional-images-title {
+.images-section-title {
   font-size: 1.4rem;
   color: #2c3e50;
   margin: 0 0 20px 0;
@@ -1944,34 +1956,103 @@ margin: 0;
   border-bottom: 2px solid #f0f0f0;
 }
 
-.additional-images-grid {
+/* Два и более скриншотов - две колонки без кликабельности */
+.images-grid-two-columns {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.additional-image-item {
+.image-grid-item {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border: 1px solid #eaeaea;
-  transition: all 0.3s ease;
 }
 
-.additional-image-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.additional-image-item img {
+.image-grid-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
+  pointer-events: none;
+}
+
+/* Документы внизу (когда несколько скриншотов) */
+.review-docs-section-full {
+  margin-top: 40px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.docs-section-title-full {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.docs-list-full {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doc-item-full {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid #eaeaea;
+}
+
+.doc-item-full:hover {
+  transform: translateX(5px);
+  border-color: #805118;
+}
+
+.doc-icon-full {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.doc-info-full {
+  flex: 1;
+}
+
+.doc-title-full {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.doc-download-full {
+  background: #805118;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.doc-download-full:hover {
+  background: #6b4414;
 }
 
 /* Футер модалки */
 .review-modal-footer {
-  padding: 20px 30px;
+  padding: 15px 30px;
   background: #f8f9fa;
   border-top: 1px solid #eaeaea;
   display: flex;
@@ -1996,33 +2077,6 @@ margin: 0;
   box-shadow: 0 5px 15px rgba(128, 81, 24, 0.2);
 }
 
-/* Кнопка закрытия в правом верхнем углу */
-.modal-close-top {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  color: #333;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.modal-close-top:hover {
-  background: white;
-  transform: rotate(90deg);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
 /* ----------------------- */
 /* АДАПТИВ ДЛЯ МОБИЛЬНЫХ */
 @media (max-width: 992px) {
@@ -2033,150 +2087,55 @@ margin: 0;
   }
   
   .review-modal-header {
-    padding: 20px 20px 15px;
-    position: relative;
-    padding-top: 60px;
+    padding: 25px 20px 15px;
   }
   
-  .modal-close-top {
-    top: 15px;
-    right: 15px;
-    width: 36px;
-    height: 36px;
-    font-size: 1.3rem;
-  }
   
   .review-author-name {
     font-size: 1.5rem;
   }
   
-  .review-role-text {
-    font-size: 1rem;
-    margin-bottom: 15px;
+  .review-stars-header {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
   }
-  
-  .review-meta-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+
   
   .review-date-simple {
     align-self: flex-end;
   }
   
-  /* На мобильной версии - последовательное расположение */
   .review-modal-body {
-    padding: 0 20px 20px;
-    display: block;
+    padding: 20px 20px 20px;
   }
   
-  .review-content-wrapper {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  /* На мобильной версии - последовательное расположение */
+  .review-content-wrapper,
+  .review-content-wrapper-full {
+    display: block;
     margin-bottom: 30px;
   }
   
-  .review-text-column {
-    order: 1;
-  }
-  
-  .review-image-column {
-    order: 2;
-    position: static;
-  }
-  
-  .review-docs-sidebar {
-    order: 3;
-    margin-top: 25px;
-  }
-  
-  /* Дополнительные скриншоты на мобильной */
-  .review-additional-images {
-    order: 4;
-    margin-top: 30px;
-  }
-  
-  .additional-images-grid {
-    grid-template-columns: 1fr; /* Одна колонка на мобильной */
+  /* Несколько скриншотов на мобильной - один под другим */
+  .images-grid-two-columns {
+    grid-template-columns: 1fr;
     gap: 15px;
   }
   
-  .additional-image-item {
-    aspect-ratio: 16/9;
-  }
-  
-  .additional-image-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Документы в последовательном порядке */
-  .review-docs-full {
-    order: 5;
-    margin-top: 30px;
-    background: #f8f9fa;
-    border-radius: 12px;
-    padding: 20px;
-  }
-  
-  .docs-full-title {
-    font-size: 1.3rem;
-    color: #2c3e50;
-    margin: 0 0 15px 0;
-    font-weight: 600;
-  }
-  
-  .docs-list-full {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .doc-item-full {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 15px;
-    background: white;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .doc-icon-full {
-    font-size: 1.8rem;
-  }
-  
-  .doc-info-full {
-    flex: 1;
-  }
-  
-  .doc-title-full {
-    font-weight: 600;
-    color: #333;
-    margin: 0 0 5px 0;
-    font-size: 1rem;
-  }
-  
-  .doc-download-full {
-    background: #805118;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-  }
   
   .review-modal-footer {
     padding: 15px 20px;
-    order: 6;
   }
   
   .action-btn-close {
     width: 100%;
     padding: 14px;
+  }
+  .review-text-column {
+  margin-bottom: 20px;
+  }
+  
+  .review-main-image {
+  width: 100%;
   }
 }
