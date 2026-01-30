@@ -3,7 +3,7 @@
     {
       "id": "rev-002",
       "date": "2025-07-21",
-      "author": "Алена",
+      "author": "один скрин",
       "authorRole": "Физ. лицо",
       "rating": 5,
       "lawArea": [
@@ -24,9 +24,9 @@
       "status": "published"
     },
 	{
-      "id": "rev-003",
+      "id": "rev-013",
       "date": "2025-07-23",
-      "author": "Анастасия",
+      "author": "Два скрина",
       "authorRole": "Физ. лицо",
       "rating": 5,
       "lawArea": [
@@ -40,16 +40,21 @@
       "attachments": [
         {
           "title": "Скрин 1",
-          "url": "content/reviews/rev-3-b4yc8fz9jf.jpg",
+          "url": "content/reviews/rev-1-wcqu3v9oe6.jpg",
+          "type": "image"
+        },
+		{
+          "title": "Скрин 2",
+          "url": "content/reviews/rev-1-wcqu3v9oe6.jpg",
           "type": "image"
         }
       ],
       "status": "published"
     },
 	{
-      "id": "rev-001",
+      "id": "rev-011",
       "date": "2025-09-17",
-      "author": "Вера",
+      "author": "1 скрин и документ",
       "authorRole": "Физ. лицо",
       "rating": 5,
       "lawArea": [
@@ -59,7 +64,10 @@
       "result": "Создан резонанс, проведена досудебная работа, дом продан подрядчику по рыночной цене.",
       "text": " ",
       "tags": [],
-      "docs": [],
+      "docs": [
+	  { "title": "Решение суда", "url": "/docs/rev-001/decision.pdf", "type": "pdf" },
+	  { "title": "Выписка", "url": "/docs/rev-001/decision.pdf", "type": "pdf" }
+	  ],
       "attachments": [
         {
           "title": "Скрин 1",
@@ -67,6 +75,53 @@
           "type": "image"
         }
       ],
+      "status": "published"
+    },
+	{
+      "id": "rev-009",
+      "date": "2025-09-17",
+      "author": "2 скрина и документ",
+      "authorRole": "Физ. лицо",
+      "rating": 5,
+      "lawArea": [
+        "Земельное право"
+      ],
+      "problem": "Министерство транспорта совместно с подрядной организацией построили федеральную трассу в 4 метрах от частного дома, в результате чего жить в доме стало опасно.",
+      "result": "Создан резонанс, проведена досудебная работа, дом продан подрядчику по рыночной цене.",
+      "text": " ",
+      "tags": [],
+      "docs": [{ "title": "Решение суда", "url": "/docs/rev-001/decision.pdf", "type": "pdf" }],
+      "attachments": [
+        {
+          "title": "Скрин 1",
+          "url": "content/reviews/rev-1-wcqu3v9oe6.jpg",
+          "type": "image"
+        },
+		{
+          "title": "Скрин 2",
+          "url": "content/reviews/rev-1-wcqu3v9oe6.jpg",
+          "type": "image"
+        }
+      ],
+      "status": "published"
+    },
+	{
+      "id": "rev-008",
+      "date": "2025-09-17",
+      "author": "без скринов и текст",
+      "authorRole": "Физ. лицо",
+      "rating": 5,
+      "lawArea": [
+        "Земельное право"
+      ],
+      "problem": "Министерство транспорта совместно с подрядной организацией построили федеральную трассу в 4 метрах от частного дома, в результате чего жить в доме стало опасно.",
+      "result": "Создан резонанс, проведена досудебная работа, дом продан подрядчику по рыночной цене.",
+      "text": "1212121221 ваарп пар апрпар пар парапр парп арпа рпарапрпа рпа прапр парпа рпарпарпарпар",
+      "tags": [],
+      "docs": [
+	  { "title": "Решение суда", "url": "/docs/rev-001/decision.pdf", "type": "pdf" }
+	  ],
+      "attachments": [],
       "status": "published"
     }
   ]
